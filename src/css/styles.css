@@ -4,3 +4,10 @@
 @import url('./modal-window.css');
 @import url('./shopping-list.css');
 @import url('./footer.css');
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/static/DMSans-Medium.ttf') format('truetype'),
+    url('../fonts/static/DMSans-Bold.ttf') format('truetype'),
+    url('../fonts/static/DMSans-Italic.ttf') format('truetype');
+}
