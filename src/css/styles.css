@@ -7,7 +7,9 @@
 
 @font-face {
   font-family: 'DM Sans';
-  src: url('../fonts/static/DMSans-Medium.ttf') format('truetype'),
+  src: url('../fonts/static/DMSans-Regular.ttf') format('truetype'),
+    url('../fonts/static/DMSans-SemiBold.ttf') format('truetype'),
+    url('../fonts/static/DMSans-Medium.ttf') format('truetype'),
     url('../fonts/static/DMSans-Bold.ttf') format('truetype'),
     url('../fonts/static/DMSans-Italic.ttf') format('truetype');
 }
