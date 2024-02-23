@@ -1,0 +1,33 @@
+.shoplist-name{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 119%;
+    letter-spacing: -0.04em;
+    /* color: ; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+.shoplist-zerobooks{
+    min-width: 265px;
+    min-height: 248px;
+
+}
+.shoplist-zerobooks-text{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #000000;
+    opacity: 0.6;
+    padding-bottom: 14px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.shoplist-zerobooks-img{
+    min-width: 265px;
+    min-height: 198px;
+}
