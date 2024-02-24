@@ -1,0 +1,156 @@
+/* body.modal-open {
+  overflow: hidden;
+} */
+
+.modal-wrapper {
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  border: 2px solid #111;
+  border-radius: 18px;
+  width: 335px;
+  height: 762px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  padding: 0;
+  height: 16px;
+  width: 16px;
+  stroke: #111;
+  background-color: transparent;
+  border: none;
+}
+
+.book-wrapper {
+  padding: 36px 24px;
+  width: 287px;
+}
+
+.book-inner {
+}
+
+.book-img-wrapper {
+}
+
+.book-img {
+  margin-bottom: 14px;
+  background-color: grey;
+  border-radius: 8px;
+  width: 287px;
+  height: 408px;
+}
+
+.book-info {
+}
+
+.book-name {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.125;
+  letter-spacing: -0.04em;
+  color: #111;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.book-author {
+  margin-bottom: 9px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: -0.04em;
+  color: #b4afaf;
+}
+
+.book-description {
+  margin-bottom: 23px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.04em;
+  color: #111;
+}
+
+.book-links {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.book-links a {
+  cursor: pointer;
+  transition: background 0.5s ease-in;
+  mix-blend-mode: luminosity;
+}
+
+.book-links-amazon {
+  display: block;
+  background: url(../img/amazon-default.png) no-repeat;
+  height: 20px;
+  width: 62px;
+}
+
+.book-links-amazon:hover {
+  background: url(../img/amazon-hover.png) no-repeat;
+}
+
+.book-links-applebook {
+  display: block;
+  background: url(../img/book-default.png) no-repeat;
+  height: 32px;
+  width: 33px;
+}
+
+.book-links-applebook:hover {
+  background: url(../img/book-hover.png) no-repeat;
+}
+
+.buttonList {
+  display: block;
+  margin: 0 auto 8px;
+  border: 2px solid #4f2ee8;
+  border-radius: 40px;
+  padding: 14px 28px;
+  width: 211px;
+  height: 46px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111;
+  background-color: #fff;
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.buttonList:hover {
+  background-color: #4f2ee8;
+  color: #fff;
+}
+
+.buttonList:focus {
+  color: #fff;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.15);
+  background-color: #4f2ee8;
+}
+
+.removeFromList-info {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.hidden {
+  display: none;
+}
