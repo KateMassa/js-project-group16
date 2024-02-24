@@ -1,25 +1,42 @@
 import { BooksApi } from "./fetchAPI";
 
 const booksApi = new BooksApi;
+const topBooksList = document.querySelector('.top-books-list');
+const booksTitleContainer = document.querySelector('.books-title-container');
 
 export function renderBestsellers() {
 
+  //====== Записуємо кількість книг до відмальовки з результату функції
+  let limit = calculateLimit(window.innerWidth);
+
+  //===== Запитуємо книги з серверу, передаємо дані в функцію і відмальовуємо
   booksApi.getTopBooks()
-    .then(data => dataBestsellers(data))
-    .catch();
+    .then(data => dataBestsellers(data, limit))
+    .catch(error => console.error('Error fetching top books:', error));
 }
 
-let limit = 1;
+//==== Вираховуємо кількіть книг до відмальовки, в залежності від ширини екрану
+function calculateLimit(screenWidth) {
+  if (screenWidth >= 1440) {
+    return 5;
+  } else if (screenWidth >= 768) {
+    return 3;
+  } else {
+    return 1;
+  }
+}
 
-function dataBestsellers(data) {
 
-//   __ul-class__.innerHTML = '';
+// ==== Функція на відмальовку бестселлерів
+function dataBestsellers(data, limit) {
+
+  topBooksList.innerHTML = '';
   const dataBestsellers = data
     .map(elem => {
       let cardStarterMarkup = `<li><h2 class="gallery-title">${elem.list_name}</h2>
     <ul class="gallery-book-list" data-filter="${elem.list_name}">`;
       let booksArray = [];
-      for (let i = 0; i < limit; i += 1) {
+      for (let i = 0; i < limit && i < elem.books.length; i++) {
         let book = `<li class='gallery-book-item' data-bookid="${elem.books[i]._id}">
         <a class="gallery-book-link">
         <div class="preview">
@@ -42,8 +59,16 @@ function dataBestsellers(data) {
     })
     .join(' ');
 
-//   __ul-class___.innerHTML = dataBestsellers;
-//   const dataMarkupTitle = `<h2>Best Sellers <span class="colortext">Books</span></h2>`;
-//   __title-class___.innerHTML = dataMarkupTitle;
+  topBooksList.innerHTML = dataBestsellers;
+  const dataMarkupTitle = `<h2 class="top-books-title">Best Sellers <span class="colortext">Books</span></h2>`;
+  booksTitleContainer.innerHTML = dataMarkupTitle;
+
 }
+
+
+//===== Зміна кількості книг до відмальовки при зміні ширини екрану
+window.addEventListener('resize', () => {
+  let limit = calculateLimit(window.innerWidth);
+  renderBestsellers(limit);
+});
 

@@ -8,6 +8,7 @@ export class BooksApi {
     this.CATEGORY_LIST_ENDPOINT = '/category-list';
   }
 
+  //==== Метод на отримання книг-бестселлерів
   async getTopBooks() {
     try {
       const url = `${this.BASE_URL}${this.TOP_BOOKS_ENDPOINT}`;
@@ -20,6 +21,8 @@ export class BooksApi {
     }
   }
 
+
+  //==== Метод на отримання книг за категорією
   async getBooksByCategory(selectedCategory) {
     try {
       const url = `${this.BASE_URL}${this.CATEGORY_ENDPOINT}${selectedCategory}`;
@@ -32,6 +35,8 @@ export class BooksApi {
     }
   }
 
+
+  //==== Метод на отримання додаткової інформації про книгу за id
   async getDetails(bookId) {
     try {
       const url = `${this.BASE_URL}/${bookId}`;
@@ -44,6 +49,8 @@ export class BooksApi {
     }
   }
 
+
+  //==== Метод на отримання списку категорій книг
   async getCategoryList() {
     try {
       const url = `${this.BASE_URL}${this.CATEGORY_LIST_ENDPOINT}`;
