@@ -7,7 +7,6 @@ body {
     font-size: 32px;
     line-height: 119%;
     letter-spacing: -0.04em;
-    margin-top: 40px;
     margin-bottom: 120px;
 
 }
@@ -17,9 +16,11 @@ body {
 
 }
 .container{
-    width: 100%;
+    /* width: 100%; */
     padding-right: 20px;
     padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .shoplist-zerobooks-text{
     font-family: "DM Sans", sans-serif;
@@ -35,8 +36,6 @@ body {
     padding-right: 11px;
     width: 244px;
     min-height: 36px;
-    /* дописать размер поля, чтоб текст в две строчки был */
-    /* расположить текст и картинку по центру */
 }
 .shoplist-zerobooks-img{
     min-width: 265px;
@@ -48,6 +47,66 @@ body {
     align-items: center; 
     flex-wrap: wrap;
     
+}
+
+/* БЛОК КНИГ */
+
+.shoplist-book-block{
+border: 2px solid rgba(79, 46, 232, 0.4);
+border-radius: 16px;
+padding: 30px 24px;
+/* width: 335px; */
+height: 170px;
+background-color: #fff;
+}
+.shoplist-delete-button{
+    border-radius: 100%;
+    border: none;
+    background-color: #4F2EE8;
+    width: 28px;
+    height: 28px;
+    color: #fff;
+}
+.shoplist-delete-icon{
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+}
+.shoplist-book-title{
+    font-family: "DM Sans Bold", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 112%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #111111;
+}
+.shoplist-book-genre{
+    font-family: "DM Sans Regular", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: 0.03em;
+    color: #b4afaf;
+}
+.shoplist-book-description{
+    font-family: "DM Sans Regular", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.04em;
+    color: #111111;
+    width: 193px;
+    height: 72px;
+}
+.shoplist-book-autor{
+    font-family: "DM Sans Italic", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 117%;
+    letter-spacing: -0.04em;
+    color: #b4afaf;
 }
 
 /* АДАПТИВ */
