@@ -1,18 +1,24 @@
 .shoplist-name{
-    font-family: "DM Sans", sans-serif;
+    font-family: "DM Sans Bold", sans-serif;
     font-weight: 700;
     font-size: 32px;
     line-height: 119%;
     letter-spacing: -0.04em;
-    /* color: ; */
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 120px;
 
 }
 .shoplist-zerobooks{
     min-width: 265px;
     min-height: 248px;
 
+}
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 .shoplist-zerobooks-text{
     font-family: "DM Sans", sans-serif;
@@ -26,8 +32,22 @@
     padding-bottom: 14px;
     padding-left: 11px;
     padding-right: 11px;
+    width: 244px;
+    min-height: 36px;
+    /* дописать размер поля, чтоб текст в две строчки был */
+    /* расположить текст и картинку по центру */
 }
 .shoplist-zerobooks-img{
     min-width: 265px;
-    min-height: 198px;
+    height: auto;
 }
+.shoplist-zerobook-block{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap;
+    
+}
+
+/* АДАПТИВ */
+
