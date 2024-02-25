@@ -1,8 +1,9 @@
 import { BooksApi } from "./fetchAPI";
+import { createBookCard } from "./bookCardTemplate";
+import { elements } from "./renderCategory";
 
 const booksApi = new BooksApi;
-const topBooksList = document.querySelector('.top-books-list');
-const booksTitleContainer = document.querySelector('.books-title-container');
+
 let limit = 1;
 
 export function renderBestsellers() {
@@ -31,8 +32,8 @@ function calculateLimit(screenWidth) {
 // ==== Функція на відмальовку бестселлерів
 function dataBestsellers(data, limit) {
   
-  topBooksList.innerHTML = '';
-  booksTitleContainer.innerHTML = '';
+  elements.topBooksList.innerHTML = '';
+  elements.booksTitleContainer.innerHTML = '';
 
   const dataBestsellers = data
     .map(elem => {
@@ -41,20 +42,7 @@ function dataBestsellers(data, limit) {
       let booksArray = [];
 
       for (let i = 0; i < limit && i < elem.books.length; i++) {
-        let book = `<li class='gallery-book-item' data-bookid="${elem.books[i]._id}">
-        <a class="gallery-book-link">
-        <div class="preview">
-          <img class="gallery-book-img" data-id="${elem.books[i]._id}" src="${elem.books[i].book_image}" alt="${elem.books[i].title}">
-          <div class="actions-card">
-        <p class="action-text">quick view</p>
-          </div>
-        </div>
-          <div class="content">
-            <h3 class="gallery-book-name">${elem.books[i].title}</h3>
-            <h4 class="gallery-book-text">${elem.books[i].author}</h4>
-          </div>
-        </a>
-      </li>`;
+        let book = createBookCard(elem, i);
         booksArray.push(book);
       }
       
@@ -66,10 +54,10 @@ function dataBestsellers(data, limit) {
      })
     .join('');
   
-  topBooksList.innerHTML = dataBestsellers;
+  elements.topBooksList.innerHTML = dataBestsellers;
   
   const dataMarkupTitle = `<h2 class="top-books-title">Best Sellers <span class="colortext">Books</span></h2>`;
-  booksTitleContainer.innerHTML = dataMarkupTitle;
+  elements.booksTitleContainer.innerHTML = dataMarkupTitle;
 
   onSeeMoreBtn();
 }
@@ -108,12 +96,18 @@ async function onFiltred(event) {
     }
   });
 
+  // === Шукаємо і ховаємо кнопку в обраній категорії
+  const selectedCategoryBtn = selectedCategory.parentElement.querySelector('.see-more-btn');
+  selectedCategoryBtn.style.display = 'none';
+
   if (categoryName !== 'Best Sellers Books') {
     const booksByCategory = await booksApi.getBooksByCategory(categoryName);
     renderMoreBooks(booksByCategory, categoryName);
   }
+
 }
 
+// === Функція відмальовує книги обраної категорії
 function renderMoreBooks(books, dataAttr) {
   const categoryContainer = document.querySelector(`ul[data-filter="${dataAttr}"]`);
 
@@ -135,7 +129,6 @@ function renderMoreBooks(books, dataAttr) {
   ).join('');
 
   categoryContainer.innerHTML = booksMarkup;
-
 }
 
 //===== Зміна кількості книг до відмальовки при зміні ширини екрану
