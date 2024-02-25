@@ -13,7 +13,7 @@ function getBookIndexInShoppingList(bookData) {
     booksShoppingList = JSON.parse(booksShoppingList);
 
     // Find the index of the book with the given ID
-    const bookIndex = booksShoppingList.findIndex(book => book.id === bookData.id);
+    const bookIndex = booksShoppingList.findIndex(book => book._id === bookData._id);
 
     return bookIndex;
 }
@@ -27,7 +27,7 @@ function addToShoppingList(bookData) {
     }
 
     // Check if a book with the same ID already exists
-    const existingBookIndex = booksShoppingList.findIndex(item => item.id === bookData.id);
+    const existingBookIndex = booksShoppingList.findIndex(item => item._id === bookData._id);
     if (existingBookIndex === -1) {
         booksShoppingList.push(bookData);
 
@@ -43,7 +43,7 @@ function removeFromShoppingList(bookData) {
     booksShoppingList = JSON.parse(booksShoppingList);
 
     // Find the index of the book with the given ID
-    const bookIndex = booksShoppingList.findIndex(book => book.id === bookData.id);
+    const bookIndex = booksShoppingList.findIndex(book => book._id === bookData._id);
     if (bookIndex !== -1) {
         booksShoppingList.splice(bookIndex, 1);
         localStorage.setItem("booksShoppingList", JSON.stringify(booksShoppingList));
@@ -51,11 +51,31 @@ function removeFromShoppingList(bookData) {
 }
 
 function openModal(bookData) {
-    const template = document.querySelector('#modal-template');
-    const lightbox = new basicLightbox.create(template);
-    const modalBody = lightbox.element();
+    let escHandlerFn;
+    let closeHandlerFn;
 
-    modalBody.querySelector('.modal-close').onclick = lightbox.close;
+    const template = document.querySelector('#modal-template');
+    const lightbox = new basicLightbox.create(template, {
+        onShow: (instance) => {
+            document.body.classList.add('modal-opened');
+            escHandlerFn = (event) => {
+                if (event.key === "Escape") {
+                    instance.close();
+                }
+            };
+            document.addEventListener("keydown", escHandlerFn);
+            closeHandlerFn = (e) => {
+                document.body.classList.remove('modal-opened');
+                instance.close();
+            };
+            instance.element().querySelector('.modal-close').addEventListener('click', closeHandlerFn);
+        },
+        onClose: (instance) => {
+            document.removeEventListener("keydown", escHandlerFn);
+            instance.element().querySelector('.modal-close').removeEventListener('click', closeHandlerFn);
+        }
+    });
+    const modalBody = lightbox.element();
 
     modalBody.querySelector('.book-img').src = bookData.book_image;
     modalBody.querySelector('.book-name').innerText = bookData.title;
@@ -98,6 +118,7 @@ function openModal(bookData) {
         addToShoppingListElement.classList.remove('hidden');
         removeFromShoppingListElement.classList.add('hidden');
     });
+    
 
     lightbox.show();
 }
@@ -119,4 +140,3 @@ booksListContainer.addEventListener('click', function (e) {
         loadBookForModal(e.target.href);
     }
 });
-
