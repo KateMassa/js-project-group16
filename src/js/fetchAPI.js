@@ -21,7 +21,6 @@ export class BooksApi {
     }
   }
 
-
   //==== Метод на отримання книг за категорією
   async getBooksByCategory(selectedCategory) {
     try {
@@ -30,11 +29,13 @@ export class BooksApi {
 
       return response.data;
     } catch (error) {
-      console.error(`Error fetching books for category '${selectedCategory}':`, error);
+      console.error(
+        `Error fetching books for category '${selectedCategory}':`,
+        error
+      );
       throw error;
     }
   }
-
 
   //==== Метод на отримання додаткової інформації про книгу за id
   async getDetails(bookId) {
@@ -44,11 +45,13 @@ export class BooksApi {
 
       return response.data;
     } catch (error) {
-      console.error(`Error fetching details for book with ID '${bookId}':`, error);
+      console.error(
+        `Error fetching details for book with ID '${bookId}':`,
+        error
+      );
       throw error;
     }
   }
-
 
   //==== Метод на отримання списку категорій книг
   async getCategoryList() {
