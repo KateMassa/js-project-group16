@@ -20,11 +20,16 @@
               srcset="./img/books-pile.jpg 1x, ./img/book-pile-2x.jpg 2x"
               alt="This page is empty" 
               width="265px"
-              height="198px">
+              height="198px"/>
         </div>
-        <div class="shoplist-book-block" id="shoplistBook" >
-            <!-- style="display: none;" в див написать -->
-            <img src="book-cover.jpg" alt="Book Cover" class="shoplist-book-cover">
+        <div class="shoplist-book-block hidden" id="shoplistBook" >
+            <img src="" 
+            alt="Book Cover" 
+            class="shoplist-book-cover"
+            width="100px"
+            height="142px"
+            style="background-color: #F6F6F6"
+            >
             <div class="shoplist-book-info">
                 <h2 class="shoplist-book-title">Название книги</h2>
                 <h3 class="shoplist-book-genre">hmmm</h3>
@@ -33,10 +38,10 @@
             </div>
             <button class="shoplist-delete-button">
                 <svg width="16" height="16" class="shoplist-delete-icon">
-                    <use href="../img/icons.svg#trash"></use>
-                  </svg>
+                    <use href="./img/icons.svg#trash"></use>
+                </svg>
             </button>
-        </div>
+        </div> 
       </section>
       
 </body>

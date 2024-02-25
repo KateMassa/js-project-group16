@@ -54,10 +54,12 @@ body {
 .shoplist-book-block{
 border: 2px solid rgba(79, 46, 232, 0.4);
 border-radius: 16px;
-padding: 30px 24px;
+padding: 14px;
 /* width: 335px; */
-height: 170px;
+/* max-height: 170px; */
+max-height: calc(177px - (padding + margin));
 background-color: #fff;
+display: flex;
 }
 .shoplist-delete-button{
     border-radius: 100%;
@@ -72,6 +74,12 @@ background-color: #fff;
     height: 16px;
     fill: #fff;
 }
+.shoplist-book-cover{
+    border-radius: 8px;
+    /* min-width: 100px; */
+    height: 142px;  
+    /* float: left; */
+}
 .shoplist-book-title{
     font-family: "DM Sans Bold", sans-serif;
     font-weight: 700;
@@ -80,6 +88,9 @@ background-color: #fff;
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: #111111;
+    padding-left: 14px;
+    padding-bottom: 4px;
+    height: 18px;
 }
 .shoplist-book-genre{
     font-family: "DM Sans Regular", sans-serif;
@@ -88,6 +99,9 @@ background-color: #fff;
     line-height: 117%;
     letter-spacing: 0.03em;
     color: #b4afaf;
+    padding-left: 14px;
+    padding-bottom: 8px;
+    height: 14px;
 }
 .shoplist-book-description{
     font-family: "DM Sans Regular", sans-serif;
@@ -97,7 +111,9 @@ background-color: #fff;
     letter-spacing: -0.04em;
     color: #111111;
     width: 193px;
-    height: 72px;
+    padding-left: 14px;
+    padding-bottom: 16px;
+    height: 68px;
 }
 .shoplist-book-autor{
     font-family: "DM Sans Italic", sans-serif;
@@ -107,7 +123,13 @@ background-color: #fff;
     line-height: 117%;
     letter-spacing: -0.04em;
     color: #b4afaf;
+    padding-left: 14px;
 }
+.hidden{
+    /* visibility: hidden; */
+    /* display: none; */
+}
+/* тут надо расположить картинку слева, а всё справа. может дисплей флекс, посмотрим */
 
 /* АДАПТИВ */
 
