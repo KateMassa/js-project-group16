@@ -2,6 +2,10 @@
   overflow-y: auto;
 }
 
+.basicLightbox__placeholder {
+  margin: auto;
+}
+
 .modal-wrapper {
   overflow-y: auto;
   position: relative;
@@ -12,6 +16,7 @@
   min-height: 762px;
   margin: 0 auto;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 .modal-close {
@@ -37,15 +42,17 @@
 
 .book-wrapper {
   padding: 36px 24px;
-  width: 287px;
   box-sizing: border-box;
 }
 
-.book-img {
+.book-img-wrapper {
   margin-bottom: 14px;
+}
+
+.book-img {
   background-color: grey;
   border-radius: 8px;
-  width: 287px;
+  width: 100%;
   height: 408px;
 }
 
@@ -185,7 +192,6 @@
   }
 
   .book-wrapper {
-    width: 579px;
     padding: 40px;
   }
 
@@ -201,7 +207,7 @@
 
   .book-img {
     margin-bottom: 0;
-    width: 192px;
+    width: 100%;
     height: 281px;
   }
 
