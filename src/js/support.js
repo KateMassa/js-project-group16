@@ -6,12 +6,22 @@ function createResourceCard(resource) {
 
     const link = document.createElement('a');
     link.href = resource.url;
-    link.textContent = resource.title;
     link.target = '_blank';
 
+    const img = document.createElement('img');
+    img.src = resource.img;
+    img.alt = resource.title;
+
+    const title = document.createElement('div');
+    title.textContent = resource.title;
+
+    link.appendChild(img);
+    link.appendChild(title);
     slide.appendChild(link);
+
     return slide;
 }
+
 
 function appendResourcesToSwiper() {
     const resourceList = document.getElementById('resource-list');
