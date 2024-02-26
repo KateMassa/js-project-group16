@@ -1,1 +1,66 @@
+<header class="page-header">
+  <div class="header-container">
+    <nav class="navbar">
+      <a class="logo-header" href="../index.html">
+        <svg class="logo-icon" height="28" width="109">
+          <use href="../img/icons.svg#icon-logo-light"></use>
+        </svg>
+      </a>
 
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
+
+      <button type="button" onclick="onOpen()" class="burger-menu">
+        <svg class="open-burger" height="28" width="28">
+          <use href="../img/icons.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <div class="mob-menu" id="menu">
+    <div class="header-container container">
+      <nav class="navbar">
+        <a class="logo-header" href="../index.html">
+          <svg class="logo-icon" height="28" width="109">
+            <use href="../img/icons.svg#icon-logo-light"></use>
+          </svg>
+        </a>
+
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
+
+        <button type="button" onclick="onOpen()" class="menu-close-btn">
+          <svg class="close-icon" height="28" width="28">
+            <use href="../img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <ul class="mob-menu-list">
+      <li onclick="onClose()" class="mob-menu-list-item">
+        <a href="#home"> <button class="Home-btn">Home</button></a>
+      </li>
+      <li onclick="onClose()" class="mob-menu-list-item">
+        <a href="#shopping-list"
+          >Shopping list
+          <svg class="cart-icon" height="20" width="20">
+            <use href="../img/icons.svg#icon-cart-white"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="mob-menu-img"></div>
+
+  <script src="../js/header.js" type="module"></script>
+</header>

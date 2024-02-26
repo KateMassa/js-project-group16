@@ -1,0 +1,13 @@
+.header-container {
+  border: 1.5px solid var(--black);
+  border-radius: 0 0 8px 8px;
+  width: 375px;
+  height: 64px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 18px 0;
+}
