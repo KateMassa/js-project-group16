@@ -150,13 +150,13 @@ async function loadBookForModal(link) {
   }
 }
 
-//booksListContainer.addEventListener('click', function (e) {
-//if (e.target.classList.contains('js-open-modal')) {
-//    e.preventDefault();
+booksListContainer.addEventListener('click', function (e) {
+  if (e.target.classList.contains('js-open-modal')) {
+    e.preventDefault();
 
-//     loadBookForModal(e.target.href);
-// }
-//});
+    loadBookForModal(e.target.href);
+  }
+});
 
 // Переключатель теми в хедері
 
