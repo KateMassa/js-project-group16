@@ -1,6 +1,6 @@
 import resources from './resources.js';
 
-function createResourceCard(resource) {
+function createResourceCard(resource, index) {
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
 
@@ -8,28 +8,31 @@ function createResourceCard(resource) {
     link.href = resource.url;
     link.target = '_blank';
 
-    const img = document.createElement('img');
-    img.src = resource.img;
-    img.alt = resource.title;
+    const icon = document.createElement('img');
+    icon.src = resource.imgSrc;
+    icon.srcset = resource.imgSrcset;
+    icon.alt = resource.alt;
 
     const title = document.createElement('div');
     title.textContent = resource.title;
 
-    link.appendChild(img);
+    const number = document.createElement('div');
+    number.textContent = index + 1;
+
+    link.appendChild(icon);
     link.appendChild(title);
+    slide.appendChild(number);
     slide.appendChild(link);
 
     return slide;
 }
 
-
 function appendResourcesToSwiper() {
-    const resourceList = document.getElementById('resource-list');
-    const swiperWrapper = resourceList.parentElement;
-    resources.forEach(category => {
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+    resources.forEach((category, categoryIndex) => {
         const categoryContainer = document.createElement('div');
-        category.forEach(resource => {
-            const card = createResourceCard(resource);
+        category.forEach((resource, resourceIndex) => {
+            const card = createResourceCard(resource, resourceIndex);
             categoryContainer.appendChild(card);
         });
         swiperWrapper.appendChild(categoryContainer);
@@ -39,7 +42,7 @@ function appendResourcesToSwiper() {
 document.addEventListener('DOMContentLoaded', function () {
     appendResourcesToSwiper();
 
-    const swiperContainer = document.getElementById('swiper-container');
+    const swiperContainer = document.querySelector('.swiper-container');
     const swiper = new Swiper(swiperContainer, {
         slidesPerView: 6,
         spaceBetween: 30,

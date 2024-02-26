@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function () {
+    fetchCategories();
+});
+
 const apiUrl = 'https://books-backend.p.goit.global/books/category-list';
 
 async function fetchCategories() {
@@ -20,11 +24,9 @@ function displayCategories(categories) {
 
     categories.forEach(category => {
         const listItem = document.createElement('li');
-        listItem.textContent = category;
+        listItem.textContent = category.list_name;
         list.appendChild(listItem);
     });
 
     listContainer.appendChild(list);
 }
-
-fetchCategories();
