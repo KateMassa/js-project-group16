@@ -9,7 +9,12 @@
 .dark-theme .page-header {
   background-color: #111111;
   border: 1.5px solid #fff;
+  border-radius: 0 0 8px 8px;
+  padding: 18px 20px;
+  margin: 0;
+  width: 100%;
 }
+
 .navbar {
   display: flex;
   align-content: center;
