@@ -183,5 +183,12 @@ themeSwitch.addEventListener('change', function () {
     document.body.classList.remove('dark-theme');
     document.body.classList.add('light-theme');
     localStorage.setItem('theme', 'light-theme');
+    booksListContainer.addEventListener('click', function (e) {
+      if (e.target.classList.contains('js-open-modal')) {
+        e.preventDefault();
+
+        loadBookForModal(e.target.href);
+      }
+    });
   }
 });
