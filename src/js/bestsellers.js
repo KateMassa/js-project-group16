@@ -103,8 +103,8 @@ function renderMoreBooks(books, dataAttr) {
   const categoryContainer = document.querySelector(`ul[data-filter="${dataAttr}"]`);
 
   const booksMarkup = books.map(book => `
-    <li class='gallery-book-item' data-bookid="${book._id}">
-      <a class="gallery-book-link">
+    <li class='gallery-book-item'>
+      <a class="gallery-book-link js-open-modal" data-bookid="${book._id}">
         <div class="preview">
           <img class="gallery-book-img" data-id="${book._id}" src="${book.book_image}" alt="${book.title}">
           <div class="actions-card">
