@@ -1,17 +1,112 @@
-.page-header {
+.light-theme .page-header {
   border: 1.5px solid #111111;
   border-radius: 0 0 8px 8px;
-  width: 375px;
   padding: 18px 20px;
   margin: 0;
-  min-width: 375px;
+  width: 100%;
 }
 
+.dark-theme .page-header {
+  background-color: #111111;
+  border: 1.5px solid #fff;
+}
 .navbar {
   display: flex;
   align-content: center;
+  height: 28px;
 }
 
 .mob-menu {
   display: none;
+}
+
+.logo-header {
+  margin-right: auto;
+  align-self: center;
+}
+
+.theme-switch {
+  margin-right: 14px;
+  align-self: center;
+}
+
+.burger-menu {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.light-theme .open-burger {
+  stroke: #111111;
+}
+
+.dark-theme .open-burger {
+  stroke: #fff;
+}
+
+/* Styles for theme switch in header */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.light-theme .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.light-theme .slider:before {
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1),
+    1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.light-theme input:checked + .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme input:checked + .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
 }
