@@ -2,7 +2,7 @@ import{a,b as m}from"./assets/vendor-27708577.js";(function(){const e=document.c
     <ul class="gallery-book-list" data-filter="${o.list_name}">`,c=[];for(let n=0;n<e&&n<o.books.length;n++){let d=`<li class='gallery-book-item' data-bookid="${o.books[n]._id}">
         <a class="gallery-book-link">
         <div class="preview">
-          <img class="gallery-book-img" data-id="${o.books[n]._id}" src="${o.books[n].book_image}" alt="${o.books[n].title}">
+          <img class="gallery-book-img js-open-modal" data-id="${o.books[n]._id}" src="${o.books[n].book_image}" alt="${o.books[n].title}">
           <div class="actions-card">
         <p class="action-text">quick view</p>
           </div>
