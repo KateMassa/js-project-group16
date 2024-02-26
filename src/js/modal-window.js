@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 
-const booksListContainer = document.querySelector('#book-list');
+const booksListContainer = document.querySelector('.books-section');
 
 function getBookIndexInShoppingList(bookData) {
   let booksShoppingList = localStorage.getItem('booksShoppingList');
@@ -151,10 +151,11 @@ async function loadBookForModal(link) {
 }
 
 booksListContainer.addEventListener('click', function (e) {
-  if (e.target.classList.contains('js-open-modal')) {
+  const element = event.target.closest('a');
+  if (element.classList.contains('js-open-modal')) {
     e.preventDefault();
 
-    loadBookForModal(e.target.href);
+    loadBookForModal(`https://books-backend.p.goit.global/books/${element.dataset.bookid}`);
   }
 });
 
