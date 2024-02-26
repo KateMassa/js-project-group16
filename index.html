@@ -7,17 +7,17 @@
     <title>Digital Dream Team</title>
     
     <script type="module" crossorigin src="/js-project-group16/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/vendor-253144a7.js">
+    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/vendor-27708577.js">
     <link rel="stylesheet" href="/js-project-group16/assets/vendor-b3ce9496.css">
-    <link rel="stylesheet" href="/js-project-group16/assets/index-b85ce56b.css">
+    <link rel="stylesheet" href="/js-project-group16/assets/index-1c9bdb11.css">
   </head>
   <body class="light-theme">
     <header class="page-header">
   <div class="header-container">
     <nav class="navbar">
-      <a class="logo-header" href="../index.html">
-        <svg class="logo-icon" height="28" width="109">
-          <use href="../img/icons.svg#icon-logo-light"></use>
+      <a class="logo-header" href="./index.html">
+        <svg class="logo-icon light-theme" height="28" width="109">
+          <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-logo-light"></use>
         </svg>
       </a>
 
@@ -28,7 +28,7 @@
 
       <button type="button" onclick="onOpen()" class="burger-menu">
         <svg class="open-burger" height="28" width="28">
-          <use href="../img/icons.svg#icon-menu"></use>
+          <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-menu"></use>
         </svg>
       </button>
     </nav>
@@ -37,22 +37,20 @@
   <div class="mob-menu" id="menu">
     <div class="header-container container">
       <nav class="navbar">
-        <a class="logo-header" href="../index.html">
+        <a class="logo-header" href="./index.html">
           <svg class="logo-icon" height="28" width="109">
-            <use href="../img/icons.svg#icon-logo-light"></use>
+            <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-logo-light"></use>
           </svg>
         </a>
 
-        <div class="theme-switch-wrapper">
-          <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-          </label>
-        </div>
+        <label for="themeSwitch" class="theme-switch">
+          <input type="checkbox" id="themeSwitch" />
+          <span class="slider round"></span>
+        </label>
 
         <button type="button" onclick="onOpen()" class="menu-close-btn">
           <svg class="close-icon" height="28" width="28">
-            <use href="../img/icons.svg#icon-close"></use>
+            <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-close"></use>
           </svg>
         </button>
       </nav>
@@ -66,7 +64,7 @@
         <a href="#shopping-list"
           >Shopping list
           <svg class="cart-icon" height="20" width="20">
-            <use href="../img/icons.svg#icon-cart-white"></use>
+            <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-cart-white"></use>
           </svg>
         </a>
       </li>
@@ -79,11 +77,29 @@
 
 
     <main>
-      <div class="caterories-content">
-  <div class="books-title-container"></div>
-  <ul class="top-books-list"></ul>
-  <ul class="books-list"></ul>
-</div>
+      <section class="categories">
+  <h2>Categories</h2>
+  <ul id="category-list"></ul>
+
+  <h2>Resources</h2>
+  <div class="swiper-container">
+    <div class="swiper-wrapper" id="resource-list"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <div id="resource-list" class="swiper-container">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  
+  <script
+    src="https://unpkg.com/swiper/swiper-bundle.min.js"
+    type="module"
+  ></script>
+</section>
 
       <section id="book-list">
   <a
