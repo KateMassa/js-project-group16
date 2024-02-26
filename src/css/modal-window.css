@@ -10,13 +10,21 @@
   overflow-y: auto;
   position: relative;
   font-family: 'DM Sans', sans-serif;
-  border: 2px solid #111;
   border-radius: 18px;
   width: 335px;
   min-height: 762px;
   margin: 0 auto;
-  background-color: #fff;
   box-sizing: border-box;
+}
+
+.light-theme .modal-wrapper {
+  background-color: #fff;
+  border: 2px solid #111;
+}
+
+.dark-theme .modal-wrapper {
+  background-color: #202024;
+  border: 2px solid #fff;
 }
 
 .modal-close {
@@ -29,11 +37,18 @@
   stroke: #111;
   background-color: transparent;
   border: none;
-  transition: stroke ease-in 0.5s;
 }
 
 .modal-close > svg path {
+  transition: stroke ease-in 0.5s;
+}
+
+.light-theme .modal-close > svg path {
   stroke: #111;
+}
+
+.dark-theme .modal-close > svg path {
+  stroke: #fff;
 }
 
 .modal-close:hover svg path {
@@ -66,9 +81,17 @@
   font-size: 16px;
   line-height: 1.125;
   letter-spacing: -0.04em;
-  color: #111;
   text-transform: uppercase;
+}
+
+.light-theme .book-name {
+  color: #111;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dark-theme .book-name {
+  color: #fff;
+  text-shadow: none;
 }
 
 .book-author {
@@ -87,7 +110,14 @@
   font-size: 14px;
   line-height: 1.28571;
   letter-spacing: -0.04em;
+}
+
+.light-theme .book-description {
   color: #111;
+}
+
+.dark-theme .book-description {
+  color: #fff;
 }
 
 .book-links {
@@ -107,11 +137,23 @@
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
 }
 
+.dark-theme .book-links a:hover {
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+}
+
 .book-links-amazon {
   display: block;
-  background: url(../img/amazon-default.png) no-repeat;
   height: 20px;
   width: 62px;
+}
+
+.light-theme .book-links-amazon {
+  background: url(../img/amazon-default.png) no-repeat;
+}
+
+.dark-theme .book-links-amazon {
+  background: url(../img/amazon-default-light.png) no-repeat;
+  filter: brightness(0) invert(1);
 }
 
 .book-links-applebook {
@@ -119,6 +161,10 @@
   background: url(../img/book-default.png) no-repeat;
   height: 32px;
   width: 33px;
+}
+
+.dark-theme .book-links-applebook {
+  filter: grayscale(100%);
 }
 
 .buttonList {
@@ -135,9 +181,17 @@
   line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: #111;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.light-theme .buttonList {
   background-color: #fff;
-  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+  color: #111;
+}
+
+.dark-theme .buttonList {
+  background-color: #202024;
+  color: #fff;
 }
 
 .buttonList:hover {
@@ -160,7 +214,14 @@
   line-height: 1.2;
   letter-spacing: -0.04em;
   text-align: center;
+}
+
+.light-theme .removeFromList-info {
   color: rgba(17, 17, 17, 0.5);
+}
+
+.dark-theme .removeFromList-info {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .buttonList + .removeFromList-info {
@@ -256,4 +317,71 @@
   .buttonList {
     font-size: 18px;
   }
+}
+
+/* Стилі для переключателя теми в хедері */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.light-theme .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.light-theme .slider:before {
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1),
+    1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.light-theme input:checked + .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme input:checked + .slider {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
 }

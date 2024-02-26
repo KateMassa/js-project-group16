@@ -140,3 +140,33 @@ booksListContainer.addEventListener('click', function (e) {
         loadBookForModal(e.target.href);
     }
 });
+
+
+
+// Переключатель теми в хедері
+
+const themeSwitch = document.getElementById('themeSwitch');
+
+// При загрузці сторінки провіряємо збережену тему
+window.addEventListener('DOMContentLoaded', function() {
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme) {
+    document.body.classList.add(currentTheme);
+    if (currentTheme === 'dark-theme') {
+      themeSwitch.checked = true;
+    }
+  }
+});
+
+// При зміні стану переключателя
+themeSwitch.addEventListener('change', function() {
+  if (this.checked) {
+    document.body.classList.add('dark-theme');
+    document.body.classList.remove('light-theme');
+    localStorage.setItem('theme', 'dark-theme');
+  } else {
+    document.body.classList.remove('dark-theme');
+    document.body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light-theme');
+  }
+});
