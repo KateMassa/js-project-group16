@@ -1,5 +1,4 @@
 import { BooksApi } from "./fetchAPI";
-import { createBookCard } from "./bookCardTemplate";
 
 const booksApi = new BooksApi;
 
@@ -43,6 +42,6 @@ function dataCategory(data) {
         </a>
         </li>`
         ).join('');
-    
+
     elements.bookList.innerHTML = booksMarkup;
 }
