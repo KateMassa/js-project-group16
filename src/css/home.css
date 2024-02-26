@@ -50,6 +50,10 @@
     color: var(--black);
 }
 
+.gallery-book-img{
+    cursor: pointer;
+}
+
 .gallery-book-text{
     font-style: italic;
     font-weight: 400;
@@ -72,3 +76,8 @@
     text-transform: uppercase;
     color: var(--black);
 }
+
+/* .is-open {
+    opacity: 1;
+    visibility: visible;
+} */
