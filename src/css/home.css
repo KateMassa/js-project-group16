@@ -1,83 +1,15 @@
-.caterories-content{
-    padding: 20px;
+#scroll-to-top {
+  /*styles for scrolling btn*/
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
 }
-
-.top-books-list{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.top-books-title{
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 119%;
-    letter-spacing: -0.04em;
-    color: var(--black);
-    margin-bottom: 40px;
-}
-
-.gallery-title{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 129%;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #b4afaf;
-    margin-bottom: 15px;
-}
-
-.colortext{
-    color: #4f2ee8;
-}
-
-
-.gallery-book-list{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-
-
-}
-
-.gallery-book-name{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 112%;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    color: var(--black);
-}
-
-.gallery-book-img{
-    cursor: pointer;
-}
-
-.gallery-book-text{
-    font-style: italic;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 117%;
-    letter-spacing: -0.04em;
-    color: #b4afaf;
-}
-
-.see-more-btn{
-    border: 2px solid #4f2ee8;
-    border-radius: 40px;
-    padding: 14px 28px;
-    width: 124px;
-    height: 46px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 129%;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: var(--black);
-}
-
-/* .is-open {
-    opacity: 1;
-    visibility: visible;
-} */
