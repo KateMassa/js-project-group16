@@ -1,4 +1,66 @@
-<script src="./js/localStorage.js" type="module"></script>
-<script src="./js/fetchAPI.js" type="module"></script>
-<script src="./js/modal-window.js" type="module"></script>
-<script src="./js/shopping-list.js" type="module"></script>
+<section id="book-list">
+  <a
+    class="js-open-modal"
+    href="https://books-backend.p.goit.global/books/643282b1e85766588626a0b2"
+    >Open Modal</a
+  >
+</section>
+
+<template id="modal-template">
+  <div id="modal" class="modal-wrapper">
+    <button class="modal-close">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14 2L2 14M2 2L14 14"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <div class="book-wrapper">
+      <div class="book-inner">
+        <div class="book-img-wrapper">
+          <img
+            src="./img/"
+            alt="Image"
+            width="287px"
+            height="408px"
+            class="book-img"
+          />
+        </div>
+        <div class="book-info">
+          <h3 class="book-name">Hello beautiful</h3>
+          <p class="book-author">Ann Napolitano</p>
+
+          <p class="book-description">
+            In a homage to Louisa May Alcott’s “Little Women,” a young man’s
+            dark past resurfaces as he gets to the know the family of his
+            college sweetheart.
+          </p>
+          <div class="book-links">
+            <a href="" target="_blank" class="book-links-amazon"></a>
+            <a href="" target="_blank" class="book-links-applebook"></a>
+          </div>
+        </div>
+      </div>
+
+      <button class="addToList buttonList">Add to shopping list</button>
+      <button class="removeFromList buttonList hidden">
+        Remove from shopping list
+      </button>
+      <p class="removeFromList-info hidden">
+        Сongratulations! You have added the book to the shopping list. To
+        delete, press the button “Remove from the shopping list”.
+      </p>
+    </div>
+  </div>
+</template>
+
+<script type="module" src="./js/modal-window.js"></script>
