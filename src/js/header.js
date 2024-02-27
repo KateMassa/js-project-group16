@@ -97,15 +97,19 @@ themeSwitch.addEventListener('change', function () {
 
 export const buttonClose = document.querySelector('.btn-close');
 export const buttonMenu = document.querySelector('.burger-menu');
-const modalMenu = document.querySelector('.menu-section');
+const modalMenu = document.querySelectorAll('.menu-section');
 
 
 //Functionality for opening the mobile menu
 function openMobileMenu() {
-  modalMenu.classList.add('is-open');
-  buttonMenu.style.display = 'none';
-  buttonClose.style.display = 'inline-block';
-  modalMenu.style.display = 'block';
+  
+  buttonMenu.classList.add('hidden');
+  buttonClose.classList.remove('hidden');
+  
+  modalMenu.forEach((element) => {
+    element.style.display = 'block';
+    element.classList.add('is-open');
+  });
 }
 
 buttonMenu.addEventListener('click', openMobileMenu);
@@ -113,9 +117,12 @@ buttonMenu.addEventListener('click', openMobileMenu);
 
 // Function to close the mobile menu
 function closeMobileMenu() {
-  buttonMenu.style.display = 'inline-block';
-  buttonClose.style.display = 'none';
-  modalMenu.style.display = 'none';
+  buttonMenu.classList.remove('hidden');
+  buttonClose.classList.add('hidden');
+  modalMenu.forEach((element) => {
+    element.style.display = 'none';
+    element.classList.remove('is-open');
+  })
 }
 
 // Bind a click event handler to the close button
