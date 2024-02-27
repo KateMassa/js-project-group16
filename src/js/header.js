@@ -1,4 +1,4 @@
-// Theme switcher in header
+//Theme switcher in header
 
 const themeSwitch = document.getElementById('themeSwitch');
 
@@ -35,57 +35,88 @@ themeSwitch.addEventListener('change', function () {
   }
 });
 
-const homeLink = document.querySelector('.nav-menu');
-export let currentUrl = window.location.href;
-const links = homeLink.getElementsByTagName('a');
-function currentPage() {
-  for (let i = 0; i < links.length; i++) {
-    if (links[i].href === currentUrl) {
-      links[i].classList.add('current');
-    }
-  }
-}
+// const homeLink = document.querySelector('.nav-menu');
+// export let currentUrl = window.location.href;
+// const links = homeLink.getElementsByTagName('a');
+// function currentPage() {
+//   for (let i = 0; i < links.length; i++) {
+//     if (links[i].href === currentUrl) {
+//       links[i].classList.add('current');
+//     }
+//   }
+// }
 
-currentPage();
+// currentPage();
+
+// export const buttonClose = document.querySelector('.btn-close');
+// export const buttonMenu = document.querySelector('.burger-menu');
+// const modalMenu = document.querySelector('.menu-section');
+// import { currentUrl } from './header';
+// const shoppingListPage = document.querySelector('.nav-shopping');
+// const homeListPage = document.querySelector('.nav-home');
+// console.log(shoppingListPage);
+// buttonMenu.addEventListener('click', openModalMenu);
+// buttonClose.addEventListener('click', closeModalMenu);
+
+// function closeModalMenu() {
+//   modalMenu.classList.remove('is-open');
+//   modalMenu.classList.add('hidden');
+//   buttonMenu.classList.remove('hidden');
+//   buttonClose.classList.add('hidden');
+// }
+
+// function openModalMenu() {
+//   modalMenu.classList.add('is-open');
+//   modalMenu.classList.remove('hidden');
+//   buttonMenu.classList.add('hidden');
+//   buttonClose.classList.remove('hidden');
+// }
+
+// mob-menu current page//
+// function mobMenuOnCurrentPage() {
+//   if (shoppingListPage.href === currentUrl) {
+//     buttonClose.classList.add('hidden');
+//     modalMenu.classList.add('hidden');
+//     buttonMenu.classList.remove('hidden');
+//     buttonMenu.addEventListener('click', openModalMenu);
+//   }
+
+//   if (homeListPage.href === currentUrl) {
+//     buttonClose.classList.add('hidden');
+//     modalMenu.classList.add('hidden');
+//     buttonMenu.classList.remove('hidden');
+//     buttonMenu.addEventListener('click', openModalMenu);
+//   }
+// }
+// mobMenuOnCurrentPage();
+
+
+// const buttonMenu = document.querySelector('.burger-menu');
+// const modalMenu = document.querySelector('.menu-section');
+// const buttonClose = document.querySelector('.btn-close');
 
 export const buttonClose = document.querySelector('.btn-close');
 export const buttonMenu = document.querySelector('.burger-menu');
 const modalMenu = document.querySelector('.menu-section');
-import { currentUrl } from './header';
-const shoppingListPage = document.querySelector('.nav-shopping');
-const homeListPage = document.querySelector('.nav-home');
-console.log(shoppingListPage);
-buttonMenu.addEventListener('click', openModalMenu);
-buttonClose.addEventListener('click', closeModalMenu);
 
-function closeModalMenu() {
-  modalMenu.classList.remove('is-open');
-  modalMenu.classList.add('hidden');
-  buttonMenu.classList.remove('hidden');
-  buttonClose.classList.add('hidden');
-}
 
-function openModalMenu() {
+//Functionality for opening the mobile menu
+function openMobileMenu() {
   modalMenu.classList.add('is-open');
-  modalMenu.classList.remove('hidden');
-  buttonMenu.classList.add('hidden');
-  buttonClose.classList.remove('hidden');
+  buttonMenu.style.display = 'none';
+  buttonClose.style.display = 'inline-block';
+  modalMenu.style.display = 'block';
 }
 
-// mob-menu current page//
-function mobMenuOnCurrentPage() {
-  if (shoppingListPage.href === currentUrl) {
-    buttonClose.classList.add('hidden');
-    modalMenu.classList.add('hidden');
-    buttonMenu.classList.remove('hidden');
-    buttonMenu.addEventListener('click', openModalMenu);
-  }
+buttonMenu.addEventListener('click', openMobileMenu);
 
-  if (homeListPage.href === currentUrl) {
-    buttonClose.classList.add('hidden');
-    modalMenu.classList.add('hidden');
-    buttonMenu.classList.remove('hidden');
-    buttonMenu.addEventListener('click', openModalMenu);
-  }
+
+// Function to close the mobile menu
+function closeMobileMenu() {
+  buttonMenu.style.display = 'inline-block';
+  buttonClose.style.display = 'none';
+  modalMenu.style.display = 'none';
 }
-mobMenuOnCurrentPage();
+
+// Bind a click event handler to the close button
+buttonClose.addEventListener('click', closeMobileMenu);
