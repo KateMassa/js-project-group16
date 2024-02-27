@@ -15,9 +15,9 @@ const themeSwitch = document.getElementById('themeSwitch');
 themeSwitch.addEventListener('change', function () {
   const logoIcon = document.querySelector('.logo-icon use');
   if (this.checked) {
-    logoIcon.setAttribute('href', './img/icons.svg#icon-logo-dark');
+    logoIcon.setAttribute('href', './img/icons.svg');
   } else {
-    logoIcon.setAttribute('href', './img/icons.svg#icon-logo-light');
+    logoIcon.setAttribute('href', './img/icons.svgt');
   }
 });
 
