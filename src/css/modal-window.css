@@ -63,7 +63,7 @@
   color: rgb(180, 175, 175);
 }
 
-.tittle-books {
+.title-books {
   margin-bottom: 18px;
 }
 
@@ -84,7 +84,7 @@
   /* filter: var(--color-amazon); */
 }
 
-.add-lokalstorage {
+.add-localstorage {
   display: flex;
   position: absolute;
   width: 211px;
@@ -110,7 +110,7 @@
   background-color: transparent;
 }
 
-/* .remove-lokalstorage {
+/* .remove-localstorage {
   position: absolute;
   width: auto;
   height: 46px;
@@ -129,10 +129,10 @@
   text-transform: uppercase;
 } */
 
-.add-lokalstorage:hover,
-.remove-lokalstorage:hover,
-.add-lokalstorage:focus,
-.remove-lokalstorage:focus {
+.add-localstorage:hover,
+.remove-localstorage:hover,
+.add-localstorage:focus,
+.remove-localstorage:focus {
   color: rgb(255, 255, 255);
   background: rgb(79, 46, 232);
   transition: 0.4s;
@@ -159,7 +159,7 @@
   text-align: center;
 }
 
-.hiden {
+.hidden {
   display: none;
 }
 
@@ -169,7 +169,7 @@
     height: 465px;
     padding: 40px;
   }
-  .hiden {
+  .hidden {
     display: none;
   }
   .close-modal {
@@ -180,7 +180,7 @@
     padding: 0;
   }
 
-  .desctop {
+  .desktop {
     display: flex;
     gap: 24px;
   }
@@ -191,18 +191,18 @@
     margin-bottom: 0;
   }
 
-  .lauch {
+  .launch {
     width: auto;
   }
 
-  .add-lokalstorage {
+  .add-localstorage {
     width: 499px;
     height: 64px;
     left: 40px;
     top: 361px;
   }
 
-  /* .remove-lokalstorage {
+  /* .remove-localstorage {
     position: absolute;
     width: 499px;
     height: 64px;

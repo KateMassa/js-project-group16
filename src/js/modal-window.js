@@ -16,7 +16,7 @@ const bookAPI = new BookAPI();
 document.querySelector('.gallery-list').addEventListener('click', async e => {
   const bookId = e.target.parentNode.getAttribute('id');
   const book = await bookAPI.fetchBookById(bookId);
-  renderModalwindow(book);
+  renderModalWindow(book);
 
   const modal = document.querySelector('.backdrop');
   const closeModalWindow = document.querySelector('.close-modal');
@@ -26,18 +26,17 @@ document.querySelector('.gallery-list').addEventListener('click', async e => {
   document.addEventListener('keydown', keydownHandler);
 });
 
-// export const showBoockDetails = book => {
-//   renderModalwindow(book);
+export const showBookDetails = book => {
+  renderModalWindow(book);
 
-//   const modal = document.querySelector('.backdrop');
-//   const closeModalWindow = document.querySelector('.close-modal');
+  const modal = document.querySelector('.backdrop');
+  const closeModalWindow = document.querySelector('.close-modal');
+  closeModalWindow.addEventListener('click', closeModal);
+  modal.addEventListener('click', modalClickHandler);
+  document.addEventListener('keydown', keydownHandler);
+};
 
-//   closeModalWindow.addEventListener('click', closeModal);
-//   modal.addEventListener('click', modalClickHandler);
-//   document.addEventListener('keydown', keydownHandler);
-// };
-
-async function renderModalwindow(book) {
+async function renderModalWindow(book) {
   const markup = `<div class="backdrop">
   <div class="modal">
     <button class="close-modal">
@@ -46,10 +45,10 @@ async function renderModalwindow(book) {
       </svg>
     </button>
 
-    <div class="desctop">
+    <div class="desktop">
       <img src="${book.book_image}" alt="${book.title}" class="img-modal" />
-      <div class="lauch">
-        <div class="tittle-books">
+      <div class="launch">
+        <div class="title-books">
           <h2 class="book-name">${book.title}</h2>
           <p class="author">${book.author}</p>
         </div>
