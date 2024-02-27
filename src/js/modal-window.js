@@ -89,7 +89,7 @@ async function renderModalwindow(book) {
       </div>
     </div>
 
-    <button class="add-lokalstorage" type="button"></button>
+    <button class="add-localStorage" type="button"></button>
     <p class="congrat"></p>
   </div>
 </div>
@@ -97,7 +97,7 @@ async function renderModalwindow(book) {
   const main = document.querySelector('main');
   main.insertAdjacentHTML('beforeend', markup);
 
-  const addDelBtn = document.querySelector('.add-lokalstorage');
+  const addDelBtn = document.querySelector('.add-localStorage');
   const paragraphCongrat = document.querySelector('.congrat');
 
   function updateButtonAndText() {
