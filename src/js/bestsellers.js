@@ -1,6 +1,6 @@
 import { BooksApi } from './fetchAPI';
-import { createBookCard } from "./bookCardTemplate";
-import { elements } from "./renderCategory";
+import { createBookCard } from './bookCardTemplate';
+import { elements } from './renderCategory';
 
 const booksApi = new BooksApi();
 
@@ -28,7 +28,6 @@ function calculateLimit(screenWidth) {
 
 // ==== Функція на відмальовку бестселлерів
 function dataBestsellers(data, limit) {
-
   elements.topBooksList.innerHTML = '';
   elements.booksTitleContainer.innerHTML = '';
 
@@ -39,13 +38,27 @@ function dataBestsellers(data, limit) {
       let booksArray = [];
 
       for (let i = 0; i < limit && i < elem.books.length; i++) {
-        let book = createBookCard(elem, i);
+        let book = `<li class='gallery-book-item' data-bookid="${elem.books[i]._id}">
+        <a class="gallery-book-link">
+        <div class="preview js-open-modal">
+          <img class="gallery-book-img" data-id="${elem.books[i]._id}" src="${elem.books[i].book_image}" alt="${elem.books[i].title}">
+        <div class="actions-card">
+            <p class="action-text">quick view</p>
+          </div>
+          </div>
+          <div class="content">
+            <h3 class="gallery-book-name">${elem.books[i].title}</h3>
+            <h4 class="gallery-book-text">${elem.books[i].author}</h4>
+          </div>
+        </a>
+      </li>`;
         booksArray.push(book);
       }
 
       const seeMoreBtn = `<button class="see-more-btn" data-filter="${elem.list_name}" type="button">See More</button>`;
       const booksTemplate = booksArray.join(' ');
-      const categoryMarkup = cardStarterMarkup + booksTemplate + '</ul>' + seeMoreBtn + '</li>';
+      const categoryMarkup =
+        cardStarterMarkup + booksTemplate + '</ul>' + seeMoreBtn + '</li>';
       return categoryMarkup;
     })
     .join(' ');
@@ -76,9 +89,11 @@ async function onFiltred(event) {
   });
   let categoryName = event.target.dataset['filter'];
   // === Відображаємо тільки вибрану категорію
-  const selectedCategory = document.querySelector(`ul[data-filter="${categoryName}"]`);
+  const selectedCategory = document.querySelector(
+    `ul[data-filter="${categoryName}"]`
+  );
   selectedCategory.style.display = 'block';
-  
+
   // === Видаляємо решту категорій
   const allCategoryItems = document.querySelectorAll('.top-books-list > li');
   allCategoryItems.forEach(item => {
@@ -88,21 +103,25 @@ async function onFiltred(event) {
   });
 
   // === Шукаємо і ховаємо кнопку в обраній категорії
-  const selectedCategoryBtn = selectedCategory.parentElement.querySelector('.see-more-btn');
+  const selectedCategoryBtn =
+    selectedCategory.parentElement.querySelector('.see-more-btn');
   selectedCategoryBtn.style.display = 'none';
 
   if (categoryName !== 'Best Sellers Books') {
     const booksByCategory = await booksApi.getBooksByCategory(categoryName);
     renderMoreBooks(booksByCategory, categoryName);
   }
-
 }
 
 // === Функція відмальовує книги обраної категорії
 function renderMoreBooks(books, dataAttr) {
-  const categoryContainer = document.querySelector(`ul[data-filter="${dataAttr}"]`);
+  const categoryContainer = document.querySelector(
+    `ul[data-filter="${dataAttr}"]`
+  );
 
-  const booksMarkup = books.map(book => `
+  const booksMarkup = books
+    .map(
+      book => `
     <li class='gallery-book-item'>
       <a class="gallery-book-link js-open-modal" data-bookid="${book._id}">
         <div class="preview">
@@ -117,10 +136,10 @@ function renderMoreBooks(books, dataAttr) {
         </div>
       </a>
     </li>`
-  ).join('');
+    )
+    .join('');
 
   categoryContainer.innerHTML = booksMarkup;
-
 }
 
 //===== Зміна кількості книг до відмальовки при зміні ширини екрану
