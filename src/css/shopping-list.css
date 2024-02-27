@@ -13,13 +13,7 @@ body {
   min-width: 265px;
   min-height: 248px;
 }
-.container {
-  /* width: 100%; */
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
+
 .shoplist-zerobooks-text {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;

@@ -1,9 +1,24 @@
 .container {
   max-width: 375px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mob-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .light-theme .page-header {
+  position: relative;
+  z-index: 2;
   border: 1.5px solid #111111;
   border-radius: 0 0 8px 8px;
   padding: 18px 20px;
@@ -21,12 +36,36 @@
 }
 
 .navbar {
-  display: flex;
-  align-content: center;
-  height: 28px;
+  display: none;
 }
 
-.mob-menu {
+.nav-link-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 36px;
+  height: 34px;
+  width: 72px;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--header-text-color);
+  background-color: #eac645;
+}
+
+.nav-shopping {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.nav-menu-mob {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -50,7 +89,6 @@
 }
 
 .theme-switch {
-  margin-right: 14px;
   align-self: center;
 }
 
@@ -66,6 +104,27 @@
 
 .dark-theme .open-burger {
   stroke: #fff;
+}
+
+.menu-section {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 184px;
+  min-width: 100%;
+  min-height: 812px;
+  height: 100vh;
+  background-image: url(../img/home-img-mobile.jpg),
+    radial-gradient(
+      194.44% 191.09% at 60% -23%,
+      rgb(79, 46, 232) 18.027%,
+      rgb(255, 255, 255) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+  background-size: contain;
+  z-index: 1;
 }
 
 /* Styles for theme switch in header */
@@ -133,4 +192,18 @@
 
 input:checked + .slider:before {
   transform: translateX(20px);
+}
+
+.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }

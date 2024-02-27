@@ -1,70 +1,52 @@
 <header class="page-header">
-  <div class="header-container container">
+  <div class="header-container">
     <a class="logo-header" href="./index.html">
       <svg class="logo-icon light-theme" height="28" width="109">
         <use href="./img/icons.svg#icon-logo-light"></use>
       </svg>
     </a>
+
     <nav class="navbar">
-      <a href="./home.html">Home</a>
-      <a href="#shopping-list"
+      <a href="./home.html" class="nav-link-home">Home</a>
+      <a href="#shopping-list" class="nav-shopping"
         >Shopping list
         <svg class="cart-icon" height="20" width="20">
           <use href="./img/icons.svg#icon-cart-white"></use>
         </svg>
       </a>
     </nav>
+
     <div class="mob-wrapper">
       <label for="themeSwitch" class="theme-switch">
         <input type="checkbox" id="themeSwitch" />
         <span class="slider round"></span>
       </label>
 
-      <button type="button" onclick="onOpen()" class="burger-menu">
+      <button type="button" class="burger-menu">
         <svg class="open-burger" height="28" width="28">
           <use href="./img/icons.svg#icon-menu"></use>
         </svg>
       </button>
     </div>
+
+    <button class="btn-close hidden" type="button">
+      <svg class="icon-close" width="28" height="28">
+        <use href="./img/icons.svg#icon-close"></use>
+      </svg>
+    </button>
   </div>
 
-  <div class="mob-menu" id="menu">
-    <div class="header-container">
-      <nav class="navbar">
-        <a class="logo-header" href="./index.html">
-          <svg class="logo-icon light-theme" height="28" width="109">
-            <use href="./img/icons.svg#icon-logo-light"></use>
-          </svg>
-        </a>
-
-        <label for="themeSwitch" class="theme-switch">
-          <input type="checkbox" id="themeSwitch" />
-          <span class="slider round"></span>
-        </label>
-
-        <button type="button" onclick="onOpen()" class="burger-menu">
-          <svg class="open-burger" height="28" width="28">
-            <use href="./img/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-      </nav>
-    </div>
-
-    <ul class="mob-menu-list">
-      <li class="mob-menu-list-item">
-        <a href="#home"> <button class="Home-btn">Home</button></a>
-      </li>
-      <li class="mob-menu-list-item">
-        <a href="#shopping-list"
-          >Shopping list
-          <svg class="cart-icon" height="20" width="20">
-            <use href="./img/icons.svg#icon-cart-white"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="mob-menu-img"></div>
+  <section class="menu-section is-open">
+    <nav class="nav-menu-mob">
+      <a href="./index.html" class="nav-link-home">Home</a>
+      <a href="./shopping-list.html" class="nav-shopping"
+        >Shopping list
+        <svg class="cart-icon" height="20" width="20">
+          <use href="./img/icons.svg#icon-cart-white"></use>
+        </svg>
+      </a>
+    </nav>
+  </section>
 
   <script src="./js/header.js" type="module"></script>
 </header>
