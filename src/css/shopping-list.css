@@ -16,14 +16,12 @@ body {
   display: none;
 }
 
-
-
 .shoping-list {
   display: flex;
   gap: 40px;
 }
 
-/* .discription {} */
+/* .description {} */
 
 .main-name-list {
   color: var(--color-of-categoryAll-text);
@@ -58,17 +56,8 @@ body {
   display: flex;
   align-items: center;
 }
-.type-name {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  color: #b4afaf;
-  padding-bottom: 8px;
-}
 
-.text-discription {
+.shoplist-zerobooks-text {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -243,7 +232,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   align-items: center;
-  
+
   margin: 0 auto;
 }
 
@@ -267,7 +256,4 @@ body {
 .list-of-added-books {
   display: flex;
   flex-direction: column;
-  
-  
-  
 }
