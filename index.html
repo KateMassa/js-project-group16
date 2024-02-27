@@ -7,117 +7,117 @@
     <title>Digital Dream Team</title>
     
     <script type="module" crossorigin src="/js-project-group16/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/js-project-group16/assets/index-dee0042c.css">
+    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/support-3b3315d0.js">
+    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/vendor-0cb09735.js">
+    <link rel="stylesheet" href="/js-project-group16/assets/support-93544fdf.css">
   </head>
   <body class="light-theme">
-    <header class="page-header">
-  <div class="header-container">
-    <nav class="navbar">
-      <a class="logo-header" href="./index.html">
-        <svg class="logo-icon light-theme" height="28" width="109">
-          <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-logo-light"></use>
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+<header class="header">
+  <div class="container header-container">
+    <a href="./index.html" class="logo-link">
+      <svg class="icon-logo" width="109" height="28">
+        <use href="./img/img/icons.svg"></use>
+      </svg>
+    </a>
+    <nav class="nav-menu">
+      <a href="./index.html" class="nav-link">Home</a>
+      <a href="./shopping-list.html" class="nav-shopping">Shopping list
+        <svg class="shopping-icon" width="20" height="20">
+          <use href="/js-project-group16/assets/icons-7eed7746.svg"></use>
         </svg>
       </a>
-
-      <label for="themeSwitch" class="theme-switch">
-        <input type="checkbox" id="themeSwitch" />
-        <span class="slider round"></span>
+    </nav>
+    <div class="theme-container">
+      <label class="switch">
+        <input type="checkbox" class="switch_input" name="theme" id="theme" />
+        <span class="switch_slider"> </span>
       </label>
-
-      <button type="button" onclick="onOpen()" class="burger-menu">
-        <svg class="open-burger" height="28" width="28">
-          <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-menu"></use>
+      <button class="btn-menu hidden" type="button">
+        <svg class="icon-menu" width="28" height="28">
+          <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-align-left"></use>
         </svg>
       </button>
-    </nav>
-  </div>
-
-  <div class="mob-menu" id="menu">
-    <div class="header-container container">
-      <nav class="navbar">
-        <a class="logo-header" href="./index.html">
-          <svg class="logo-icon" height="28" width="109">
-            <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-logo-light"></use>
-          </svg>
-        </a>
-
-        <label for="themeSwitch" class="theme-switch">
-          <input type="checkbox" id="themeSwitch" />
-          <span class="slider round"></span>
-        </label>
-
-        <button type="button" onclick="onOpen()" class="menu-close-btn">
-          <svg class="close-icon" height="28" width="28">
-            <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-close"></use>
-          </svg>
-        </button>
-      </nav>
+      <button class="btn-close" type="button">
+        <svg class="icon-close" width="28" height="28">
+          <use href="/js-project-group16/assets/icons-7eed7746.svg"></use>
+        </svg>
+      </button>
+      <button class="user-btn" type="button">
+        <img class="user-photo" src="#" alt="user" />
+        <!-- <p class="user-name">Stephan</p> -->
+        <svg class="icon-down" width="23" height="26">
+          <use href="/js-project-group16/assets/icons-7eed7746.svg"></use>
+        </svg>
+      </button>
     </div>
-
-    <ul class="mob-menu-list">
-      <li onclick="onClose()" class="mob-menu-list-item">
-        <a href="#home"> <button class="Home-btn">Home</button></a>
-      </li>
-      <li onclick="onClose()" class="mob-menu-list-item">
-        <a href="#shopping-list"
-          >Shopping list
-          <svg class="cart-icon" height="20" width="20">
-            <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-cart-white"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
   </div>
-  <div class="mob-menu-img"></div>
-
   
 </header>
 
-
     <main>
-      <div class="caterories-content">
-  <div class="books-title-container"></div>
-  <ul class="top-books-list"></ul>
-  <ul class="books-list"></ul>
-</div>
+      <section class="menu-section is-open">
+    <nav class="nav-menu-mob">
+ <a href="./index.html" class="home-page">Home</a>
+ <a href="./shopping-list.html" class="shopping-list-page">Shopping list
+    <svg class="shop-icon" width="20" height="20">
+        <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-uil_cart"></use>
+    </svg>
+            </a>
+        <!-- </ul> -->
+    </nav>
+</section>
+      <section class="homepage" id="homepage">
+  <div class="container navigation-category">
+    <aside class="aside-menu">
+      <ul class="category-list">
+        <li class="category-list-item" id="all-categories">
+          <h4 class="category-name">All categories</h4>
+        </li>
+      </ul>
+      <aside class="support-box">
+        <h3 class="support-title">
+          Support Ukraine
+          <svg class="support-svg" width="20px" height="32px">
+            <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-Vector"></use>
+          </svg>
+        </h3>
+        <div class="slider-container">
+          <ul class="support-list js-support"></ul>
+        </div>
 
-      <section class="shoplist-zerobooks container">
-  <h1 class="Section-header">
-    Shopping
-    <span class="header-blue-part">List</span>
-  </h1>
-  <div class="shoplist-zerobook-block">
-    <p class="shoplist-zerobooks-text">
-      This page is empty, add some books and proceed to order.
-    </p>
-    <img
-      src="../img/book-pile.png"
-      width="265px"
-      height="198px"
-      alt="This page is empty"
-      class="shoplist-zerobooks-img"
-    />
+        <div class="button-support slider-button">
+          <button class="support-button">
+            <svg class="support-button-svg">
+              <use href="/js-project-group16/assets/icons-7eed7746.svg#icon-arrowDown"></use>
+            </svg>
+          </button>
+        </div>
+      </aside>
+    </aside>
+
+    <div class="gallery">
+      <div class="title-wrapper">
+        <h2 class="category-title"></h2>
+        <h2 class="category-title-color"></h2>
+      </div>
+      <ul class="gallery-list"></ul>
+    </div>
   </div>
+
+  
+  
+  
 </section>
 
-<!-- <div class="shoplist-book-block visually-hidden" id="shoplistBook">
-  <img
-    src=""
-    alt="Book Cover"
-    class="shoplist-book-cover"
-    width="100px"
-    height="142px"
-    style="background-color: #f6f6f6"
-  />
-  <div class="shoplist-book-info"></div>
-  <button class="shoplist-delete-button">
-    <svg width="16" height="16" class="shoplist-delete-icon">
-      <use href="./img/icons.svg#trash"></use>
-    </svg>
-  </button>
-</div>-->
+      <script src="./js/localStorage.js"></script>
+    <script src="./js/fetchAPI.js"></script>
+    <script src="../img/icons.svg"></script>
+    <script src="./js/modal-window.js"></script>
 
     </main>
+
+    <!--  -->
 
     
   </body>
