@@ -14,7 +14,9 @@ export function saveToLS(value) {
     const storageDefault = [];
     const books = loadFromLS();
     if (books) {
-        books.push(value)
+        if (!isBookAlreadyExist(value._id)) {
+            books.push(value);
+        }
         localStorage.setItem(STORAGE_KEY, JSON.stringify(books));
     } else {
         storageDefault.push(value)

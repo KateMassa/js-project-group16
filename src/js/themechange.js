@@ -1,6 +1,6 @@
 
 let localStorageTheme = localStorage.getItem('theme');
-const switcher = document.querySelector('#theme');
+const switcher = document.querySelector('#themeSwitch');
 document.documentElement.getAttribute('data-theme');
 
 switcher.addEventListener('click', () => {

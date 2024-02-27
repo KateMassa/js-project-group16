@@ -1,6 +1,6 @@
 //Theme switcher in header
 
-// const themeSwitch = document.getElementById('themeSwitch');
+const themeSwitch = document.getElementById('themeSwitch');
 
 themeSwitch.addEventListener('change', function () {
   const logoIcon = document.querySelector('.logo-icon use');
@@ -11,16 +11,16 @@ themeSwitch.addEventListener('change', function () {
   }
 });
 
-// // When loading the page, we check the saved topic
-// window.addEventListener('DOMContentLoaded', function () {
-//   const currentTheme = localStorage.getItem('theme');
-//   if (currentTheme) {
-//     document.body.classList.add(currentTheme);
-//     if (currentTheme === 'dark-theme') {
-//       themeSwitch.checked = true;
-//     }
-//   }
-// });
+// When loading the page, we check the saved topic
+window.addEventListener('DOMContentLoaded', function () {
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme) {
+    document.body.classList.add(currentTheme);
+    if (currentTheme === 'dark-theme') {
+      themeSwitch.checked = true;
+    }
+  }
+});
 
 // When the switch state changes
 themeSwitch.addEventListener('change', function () {
@@ -90,6 +90,7 @@ themeSwitch.addEventListener('change', function () {
 // }
 // mobMenuOnCurrentPage();
 
+
 // const buttonMenu = document.querySelector('.burger-menu');
 // const modalMenu = document.querySelector('.menu-section');
 // const buttonClose = document.querySelector('.btn-close');
@@ -97,6 +98,7 @@ themeSwitch.addEventListener('change', function () {
 export const buttonClose = document.querySelector('.btn-close');
 export const buttonMenu = document.querySelector('.burger-menu');
 const modalMenu = document.querySelector('.menu-section');
+
 
 //Functionality for opening the mobile menu
 function openMobileMenu() {
@@ -107,6 +109,7 @@ function openMobileMenu() {
 }
 
 buttonMenu.addEventListener('click', openMobileMenu);
+
 
 // Function to close the mobile menu
 function closeMobileMenu() {
