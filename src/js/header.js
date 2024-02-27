@@ -1,14 +1,14 @@
-// const menu = document.getElementById('burger-menu');
+const menu = document.getElementById('burger-menu');
 
-// const onOpen = () => {
-//   menu.classList.add('is-open');
-// };
+const onOpen = () => {
+  menu.classList.add('is-open');
+};
 
-// const onClose = () => {
-//   menu.classList.remove('is-open');
-// };
+const onClose = () => {
+  menu.classList.remove('is-open');
+};
 
-// // Theme switcher in header
+// Theme switcher in header
 
 // const themeSwitch = document.getElementById('themeSwitch');
 
