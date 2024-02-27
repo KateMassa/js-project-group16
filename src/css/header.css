@@ -1,5 +1,4 @@
 .container {
-  max-width: 375px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -35,9 +34,6 @@
 .light-theme .header-wrapper {
   background-color: #fff;
   border: 1.5px solid #111111;
-}
-
-.light-theme .page-header {
 }
 
 .dark-theme .header-wrapper {
@@ -318,9 +314,6 @@ input:checked + .slider:before {
     font-weight: 700;
     border-radius: 36px;
     color: #000;
-  }
-
-  .page-header .nav-shopping {
   }
 
   .light-theme .page-header .nav-shopping {
