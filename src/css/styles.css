@@ -1,26 +1,48 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
 @import url('./reset.css');
+@import url('./components.css');
 @import url('./header.css');
+
 @import url('./home.css');
-@import url('./modal-window.css');
+@import url('./mobile-menu.css');
 @import url('./shopping-list.css');
-@import url('./footer.css');
+@import url('./modal-window.css');
+@import url('./support.css');
 
-@font-face {
-  font-family: 'DM Sans';
-  src: url('../fonts/static/DMSans-Regular.ttf') format('truetype'),
-    url('../fonts/static/DMSans-SemiBold.ttf') format('truetype'),
-    url('../fonts/static/DMSans-Medium.ttf') format('truetype'),
-    url('../fonts/static/DMSans-Bold.ttf') format('truetype'),
-    url('../fonts/static/DMSans-Italic.ttf') format('truetype');
+
+:root[data-theme='light']{
+  --main-bg-color: #F6F6F6;
+  --header-bg-color: #ffffff;
+  --header-border-color: #111111;
+  --header-text-color: #111111;
+  --main-bg-color-modal: #ffffff;
+  --header-logo-color: #000000;
+  --first-titles-color: #111111;
+  --color-of-categoryAll-text: #4f2ee8;
+  --color-of-category-text: rgba(17, 17, 17, 0.6);
+  --color-amazon: grayscale(100%);
+  --color-hover:drop-shadow(0px 3px 3px rgba(0, 0, 0, .35));
+  --color-apple: grayscale(100%);
 }
 
-.section-header {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  letter-spacing: -0.04em;
-  color: #111111;
-}
-.header-blue-part {
-  color: #4f2ee8;
-}
+:root[data-theme='dark'] {
+  --main-bg-color: #202024;
+  --header-bg-color: #111111;
+  --header-border-color: #ffffff;
+  --header-text-color: #ffffff;
+  --main-bg-color-modal: #202024;
+  --header-logo-color: #ffffff;
+  --first-titles-color: #ffffff;
+  --second-titles-color: #4f2ee8;
+  --first-text-color: #ffffff;
+  --color-of-categoryAll-text: #eac645;
+  --color-of-category-text: rgba(255, 255, 255, 0.6);
+  --color-amazon:brightness(0) invert(1);
+  --color-hover:drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+  --color-apple:grayscale(100%);
+};

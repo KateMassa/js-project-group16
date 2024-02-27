@@ -1,0 +1,102 @@
+
+.menu-section {
+    position:fixed;
+    top:0;
+    right: 0;
+    padding-top: 184px;
+    min-width: 100%;
+    min-height: 812px;
+    height:100vh;
+    background-image: url(../img/home-img-mobile.png), radial-gradient(194.44% 191.09% at 60% -23%, rgb(79, 46, 232) 18.027%, rgb(255, 255, 255) 100%);
+    background-repeat:no-repeat;
+    background-position: bottom 0px right 0px;
+    background-size: contain;
+    z-index:1;
+}
+
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .menu-section{
+        background-image: url(../img/home-img-mobile.png),
+            radial-gradient(194.44% 191.09% at 60% -23%, rgb(79, 46, 232) 18.027%, rgb(255, 255, 255) 100%);
+    }
+}
+
+.nav-menu-mob {
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto; 
+}
+
+.home-page{
+    display: block;
+    background-color: #eac645;
+    border-radius: 36px;
+    padding: 8px 16px;
+    width: 72px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #111;
+}
+
+.shopping-list-page {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+.home-page:hover,
+.home-page:active,
+.home-page:focus{
+background-color: #eac645;
+}
+
+/* .shopping-list-page:hover,
+.shopping-list-page:active,
+.shopping-list-page:focus {
+    padding: 8px 16px;
+    background-color: #eac645;
+    border-radius: 36px;
+} */
+
+.shop-icon {
+    fill:#fff;
+    stroke: #fff;
+}
+
+
+@media screen and (min-width:768px) {
+.menu-section{
+    display: none;
+}
+
+}
+
+.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+    visibility:hidden;
+    opacity: 0;
+    pointer-events: none;
+}
