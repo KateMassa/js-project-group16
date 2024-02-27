@@ -50,7 +50,7 @@ async function renderModalwindow(book) {
       <img src="${book.book_image}" alt="${book.title}" class="img-modal" />
       <div class="lauch">
         <div class="tittle-books">
-          <h2 class="boock-name">${book.title}</h2>
+          <h2 class="book-name">${book.title}</h2>
           <p class="author">${book.author}</p>
         </div>
 
@@ -115,7 +115,7 @@ async function renderModalwindow(book) {
     paragraphCongrat.textContent = paragraphCongratText;
 
     const resize = document.querySelector('.modal');
-    const distance = document.querySelector('.desctop');
+    const distance = document.querySelector('.desktop');
 
     const isMobile = window.innerWidth < 768;
     if (isMobile) {

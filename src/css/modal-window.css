@@ -43,7 +43,7 @@
   margin-bottom: 14px;
 }
 
-.boock-name {
+.book-name {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.12;
@@ -69,7 +69,7 @@
 
 .about-book {
   margin-bottom: 17px;
-  color:var(--first-titles-color);
+  color: var(--first-titles-color);
 }
 
 .sale-place {
@@ -97,7 +97,7 @@
 
   align-items: center;
   justify-content: center;
-  
+
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
@@ -128,8 +128,6 @@
   text-align: left;
   text-transform: uppercase;
 } */
-
-
 
 .add-lokalstorage:hover,
 .remove-lokalstorage:hover,
@@ -228,21 +226,19 @@
   }
 }
 
-
-.close-modal:hover .modal-svg-close{
-  stroke:#4F2EE8;
+.close-modal:hover .modal-svg-close {
+  stroke: #4f2ee8;
   transition: 0.4s;
 }
 
-.amazon-link{
-filter: var(--color-amazon);
+.amazon-link {
+  filter: var(--color-amazon);
 }
 
-.apple-link{
-filter: var(--color-apple);
+.apple-link {
+  filter: var(--color-apple);
 }
 
-
- /* .amazon-link:hover{
+/* .amazon-link:hover{
   filter: var(---color-hover);
 }  */
