@@ -36,9 +36,6 @@
   border: 1.5px solid #111111;
 }
 
-.light-theme .page-header {
-}
-
 .dark-theme .header-wrapper {
   background-color: #111111;
   border: 1.5px solid #fff;
@@ -317,9 +314,6 @@ input:checked + .slider:before {
     font-weight: 700;
     border-radius: 36px;
     color: #000;
-  }
-
-  .page-header .nav-shopping {
   }
 
   .light-theme .page-header .nav-shopping {
