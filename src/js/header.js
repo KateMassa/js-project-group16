@@ -20,6 +20,14 @@ window.addEventListener('DOMContentLoaded', function () {
       themeSwitch.checked = true;
     }
   }
+
+  if (location.href.indexOf('shopping-list') > -1) {
+    document.querySelector('.nav-link-home').classList.remove('active-link');
+    document.querySelector('.nav-shopping').classList.add('active-link');
+  } else {
+    document.querySelector('.nav-link-home').classList.add('active-link');
+    document.querySelector('.nav-shopping').classList.remove('active-link');
+  }
 });
 
 // When the switch state changes
