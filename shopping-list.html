@@ -7,10 +7,10 @@
     <title>Digital Dream Team</title>
     
     <script type="module" crossorigin src="/js-project-group16/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/vendor-27708577.js">
-    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/main-54800e6b.js">
-    <link rel="stylesheet" href="/js-project-group16/assets/vendor-b3ce9496.css">
+    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/main-e068f8f2.js">
+    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/vendor-4563c95f.js">
     <link rel="stylesheet" href="/js-project-group16/assets/main-a8646884.css">
+    <link rel="stylesheet" href="/js-project-group16/assets/vendor-1fe10c8c.css">
   </head>
   <body class="light-theme">
     <header class="page-header">
@@ -97,69 +97,36 @@
 </section>
 
     <main>
-      <div class="shopping-list"></div>
-      <template id="modal-template">
-  <div id="modal" class="modal-wrapper">
-    <button class="modal-close">
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14 2L2 14M2 2L14 14"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </button>
-    <div class="book-wrapper">
-      <div class="book-inner">
-        <div class="book-img-wrapper">
-          <img
-            src="./img/"
-            alt="Image"
-            width="287px"
-            height="408px"
-            class="book-img"
-          />
-        </div>
-        <div class="book-info">
-          <h3 class="book-name">Hello beautiful</h3>
-          <p class="book-author">Ann Napolitano</p>
+      <section class="homepage">
+        <div class="container navigation-category">
+          <aside class="aside-menu">
+            <aside class="support-box">
+              <h3 class="support-title">
+                Support Ukraine
+                <svg class="support-svg" width="20" height="32">
+                  <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-trident"></use>
+                </svg>
+              </h3>
+              <div class="slider-container">
+                <ul class="support-list js-support"></ul>
+              </div>
 
-          <p class="book-description">
-            In a homage to Louisa May Alcott’s “Little Women,” a young man’s
-            dark past resurfaces as he gets to the know the family of his
-            college sweetheart.
-          </p>
-          <div class="book-links">
-            <a href="" target="_blank" class="book-links-amazon"></a>
-            <a href="" target="_blank" class="book-links-applebook"></a>
+              <div class="button-support slider-button">
+                <button class="support-button">
+                  <svg class="support-button-svg" width="20" height="20">
+                    <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-arrow-down"></use>
+                  </svg>
+                </button>
+              </div>
+            </aside>
+          </aside>
+          <div class="gallery">
+            <div class="shopping-list"></div>
+            <div id="tui-pagination-container" class="tui-pagination"></div>
           </div>
         </div>
-      </div>
-
-      <button class="addToList buttonList">Add to shopping list</button>
-      <button class="removeFromList buttonList hidden">
-        Remove from shopping list
-      </button>
-      <p class="removeFromList-info hidden">
-        Сongratulations! You have added the book to the shopping list. To
-        delete, press the button “Remove from the shopping list”.
-      </p>
-    </div>
-  </div>
-</template>
-
-
-
+      </section>
     </main>
-
-    <!--  -->
 
     
 
