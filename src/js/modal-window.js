@@ -1,12 +1,8 @@
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
-import {
-  isBookAlreadyExist,
-  deleteFromLS,
-  saveToLS
-} from './localStorage';
+import { isBookAlreadyExist, deleteFromLS, saveToLS } from './localStorage';
 
-import BookAPI from './fetchAPI';
+import { BookAPI } from './fetchAPI';
 
 const bookAPI = new BookAPI();
 
@@ -94,4 +90,3 @@ export const showBookDetails = bookData => {
 
   lightbox.show();
 };
-
