@@ -1,32 +1,33 @@
-import { BooksApi } from "./fetchAPI";
+import { BooksAPI } from './fetchAPI';
 
-const booksApi = new BooksApi;
+const booksAPI = new BooksAPI();
 
 export const elements = {
   bookList: document.querySelector('.book-list'),
   topBooksList: document.querySelector('.top-books-list'),
-  booksTitleContainer: document.querySelector('.books-title-container')
+  booksTitleContainer: document.querySelector('.books-title-container'),
 };
-
 
 //=== Функція попередньо очищує контент каталогу книг та дістає книги за обраною категорією
 export function renderCategory(categoryName) {
-    elements.topBooksList.innerHTML = '';
-    elements.booksTitleContainer.innerHTML = '';
+  elements.topBooksList.innerHTML = '';
+  elements.booksTitleContainer.innerHTML = '';
 
-    const categoryTitle = document.createElement('h2');
-    categoryTitle.textContent = categoryName;
-    elements.booksTitleContainer.appendChild(categoryTitle);
+  const categoryTitle = document.createElement('h2');
+  categoryTitle.textContent = categoryName;
+  elements.booksTitleContainer.appendChild(categoryTitle);
 
-    booksApi.getBooksByCategory(categoryName)
-        .then(data => dataCategory(data))
-        .catch(error => console.error('Error fetching top books:', error));
+  booksAPI
+    .getBooksByCategory(categoryName)
+    .then(data => dataCategory(data))
+    .catch(error => console.error('Error fetching top books:', error));
 }
 
 // ==== Функція на відмальовку книг за категорією
 function dataCategory(data) {
-
-    const booksMarkup = data.map(book =>
+  const booksMarkup = data
+    .map(
+      book =>
         `<li class='gallery-book-item' data-bookid="${book._id}">
         <a class="gallery-book-link">
             <div class="preview">
@@ -41,7 +42,8 @@ function dataCategory(data) {
             </div>
         </a>
         </li>`
-        ).join('');
+    )
+    .join('');
 
-    elements.bookList.innerHTML = booksMarkup;
+  elements.bookList.innerHTML = booksMarkup;
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export class BooksApi {
+export class BooksAPI {
   constructor() {
     this.BASE_URL = 'https://books-backend.p.goit.global/books';
     this.TOP_BOOKS_ENDPOINT = '/top-books';

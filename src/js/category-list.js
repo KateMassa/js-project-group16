@@ -1,18 +1,18 @@
-import { BooksApi } from "./fetchAPI";
-import { renderBestsellers } from "./bestsellers";
-import { renderCategory } from "./renderCategory";
+import { BooksAPI } from './fetchAPI';
+import { renderBestsellers } from './bestsellers';
+import { renderCategory } from './renderCategory';
 
-const booksApi = new BooksApi();
+const booksAPI = new BooksAPI();
 const listContainer = document.getElementById('category-list');
-const allCategories = document.getElementById('all-categories')
+const allCategories = document.getElementById('all-categories');
 
 document.addEventListener('DOMContentLoaded', async function () {
-  const categories = await booksApi.getCategoryList();
+  const categories = await booksAPI.getCategoryList();
   displayCategories(categories);
 
-  const allCategories = document.getElementById('all-categories')
+  const allCategories = document.getElementById('all-categories');
   allCategories.classList.add('active');
-  
+
   // === Обробка кліку по категорії "All Categories"
   allCategories.addEventListener('click', function () {
     renderBestsellers();
@@ -21,10 +21,13 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 // === Створення розмітки для списку категорій книг
 function displayCategories(categories) {
-  const allCategoriesItem = '<li class="category-item" id="all-categories" >All categories</li>'
-  const categoryMarkup = categories.map(category => {
-    return `<li class="category-item">${category.list_name}</li>`;
-  }).join('');
+  const allCategoriesItem =
+    '<li class="category-item" id="all-categories" >All categories</li>';
+  const categoryMarkup = categories
+    .map(category => {
+      return `<li class="category-item">${category.list_name}</li>`;
+    })
+    .join('');
 
   listContainer.innerHTML = allCategoriesItem + categoryMarkup;
 
@@ -43,7 +46,5 @@ function displayCategories(categories) {
       const categoryName = event.target.textContent;
       renderCategory(categoryName);
     }
-});
-
-  
+  });
 }

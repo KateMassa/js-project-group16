@@ -1,4 +1,4 @@
-import { BooksApi } from './fetchAPI';
+import { BooksAPI } from './fetchAPI';
 import { createBookCard } from './bookCardTemplate';
 import { elements } from './renderCategory';
 import {
@@ -105,7 +105,7 @@ async function onFiltred(event) {
   selectedCategoryBtn.style.display = 'none';
 
   if (categoryName !== 'Best Sellers Books') {
-    const booksByCategory = await booksApi.getBooksByCategory(categoryName);
+    const booksByCategory = await booksAPI.getBooksByCategory(categoryName);
     renderMoreBooks(booksByCategory, categoryName);
   }
 }
