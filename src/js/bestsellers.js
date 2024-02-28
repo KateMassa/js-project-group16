@@ -1,11 +1,16 @@
 import { BooksApi } from './fetchAPI';
 import { createBookCard } from './bookCardTemplate';
 import { elements } from './renderCategory';
-import { isBookAlreadyExist, deleteFromLS, saveToLS, loadFromLS } from './localStorage';
+import {
+  isBookAlreadyExist,
+  deleteFromLS,
+  saveToLS,
+  loadFromLS,
+} from './localStorage';
 import { BookAPI } from './fetchAPI';
 // import sprite from './img/icons.svg'; // Assuming you still need this SVG sprite
 
-const booksAPI = new BookAPI();
+const booksAPI = new BooksAPI();
 const topBooksList = document.querySelector('.top-books-list');
 const booksTitleContainer = document.querySelector('.books-title-container');
 
