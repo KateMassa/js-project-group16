@@ -11,11 +11,36 @@
     <load src="partials/header.html" />
     <load src="partials/mobile-menu.html" />
     <main>
-      <div class="shopping-list"></div>
-      <load src="partials/modal-window.html" />
-    </main>
+      <section class="homepage">
+        <div class="container navigation-category">
+          <aside class="aside-menu">
+            <aside class="support-box">
+              <h3 class="support-title">
+                Support Ukraine
+                <svg class="support-svg" width="20" height="32">
+                  <use href="./img/icons.svg#icon-trident"></use>
+                </svg>
+              </h3>
+              <div class="slider-container">
+                <ul class="support-list js-support"></ul>
+              </div>
 
-    <!-- <load src="partials/footer.html" /> -->
+              <div class="button-support slider-button">
+                <button class="support-button">
+                  <svg class="support-button-svg" width="20" height="20">
+                    <use href="./img/icons.svg#icon-arrow-down"></use>
+                  </svg>
+                </button>
+              </div>
+            </aside>
+          </aside>
+          <div class="gallery">
+            <div class="shopping-list"></div>
+            <div id="tui-pagination-container" class="tui-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script type="module" src="./main.js"></script>
 
