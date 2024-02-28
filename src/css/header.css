@@ -1,22 +1,10 @@
 .page-header {
   height: 70px;
   z-index: 100;
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  width: auto;
-  border-radius: 0 0 8px 8px;
-}
-
-.light-theme .page-header {
-  background-color: #fff;
-  border: 1.5px solid #111111;
-}
-
-.dark-theme .page-header {
-  background-color: #111111;
-  border: 1.5px solid #fff;
 }
 
 .header-container {
@@ -34,7 +22,18 @@
 
 .header-wrapper {
   padding: 18px 20px;
+  border-radius: 0 0 8px 8px;
   transition: 0.4s ease-in-out;
+}
+
+.light-theme .header-wrapper {
+  background-color: #fff;
+  border: 1.5px solid #111111;
+}
+
+.dark-theme .header-wrapper {
+  background-color: #111111;
+  border: 1.5px solid #fff;
 }
 
 .navbar {
