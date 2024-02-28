@@ -236,6 +236,10 @@
   overflow: hidden;
 }
 
+.modal-opened .basicLightbox {
+  background: rgba(17, 17, 17, 0.4);
+}
+
 @media screen and (min-width: 768px) {
   .modal-wrapper {
     width: 579px;
