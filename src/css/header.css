@@ -2,8 +2,10 @@
   height: 70px;
   z-index: 100;
   position: sticky;
+  width: 100%;
   top: 0;
   left: 0;
+  width: auto;
   border-radius: 0 0 8px 8px;
 }
 
@@ -31,8 +33,7 @@
 }
 
 .header-wrapper {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding: 18px 20px;
   transition: 0.4s ease-in-out;
 }
 
