@@ -93,33 +93,48 @@ function renderShopList(data) {
     item.addEventListener('click', () => {
       deleteFromLS(bookId);
       const updatedBooks = loadFromLS();
-      const currentPage = pagination.getCurrentPage();
+      let currentPage = pagination.getCurrentPage();
 
-      pagination.setTotalItems(updatedBooks.length);
-      renderShopList(getBooksForPage(updatedBooks, currentPage));
+      updatePages(updatedBooks.length);
+
+      if ((currentPage - 1) * PAGE_SIZE >= updatedBooks.length) {
+        currentPage -= 1;
+        pagination.movePageTo(currentPage);
+      } else {
+        renderShopList(getBooksForPage(updatedBooks, currentPage));
+      }
     });
   });
 }
 
 function initPagination(booksCount) {
-
-  if (booksCount <= PAGE_SIZE) {
-    return;
-  }
-
   pagination = new Pagination('tui-pagination-container', {
         totalItems: booksCount,
         itemsPerPage: PAGE_SIZE,
         visiblePages: 3,
         usageStatistics: false
   });
+
+  updatePages(booksCount);
   
   pagination.on('afterMove', function(eventData) {
     const books = loadFromLS();
 
-    pagination.setTotalItems(books.length);
+    updatePages(books.length);
     renderShopList(getBooksForPage(books, eventData.page));
   });
+}
+
+function updatePages(booksCount) {
+  const paginationContainer = document.getElementById('tui-pagination-container');
+
+  if (booksCount <= PAGE_SIZE) {
+    paginationContainer.classList.add('hidden');
+  } else {
+    paginationContainer.classList.remove('hidden');
+  }
+
+  pagination.setTotalItems(booksCount);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
