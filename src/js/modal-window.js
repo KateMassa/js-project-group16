@@ -1,8 +1,12 @@
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
-import { isBookAlreadyExist, deleteFromLS, saveToLS } from './localStorage';
+import {
+  isBookAlreadyExist,
+  deleteFromLS,
+  saveToLS
+} from './localStorage';
 
-import { BookAPI } from './fetchAPI';
+import BookAPI from './fetchAPI';
 
 const bookAPI = new BookAPI();
 
@@ -27,7 +31,6 @@ export const showBookDetails = bookData => {
       };
       document.addEventListener('keydown', escHandlerFn);
       closeHandlerFn = e => {
-        document.body.classList.remove('modal-opened');
         instance.close();
       };
       instance
@@ -41,6 +44,8 @@ export const showBookDetails = bookData => {
         .element()
         .querySelector('.modal-close')
         .removeEventListener('click', closeHandlerFn);
+      
+      document.body.classList.remove('modal-opened');
     },
   });
   const modalBody = lightbox.element();
@@ -90,3 +95,4 @@ export const showBookDetails = bookData => {
 
   lightbox.show();
 };
+

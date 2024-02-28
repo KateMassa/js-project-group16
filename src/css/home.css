@@ -107,7 +107,7 @@
   font-size: 29px;
   font-weight: 700;
   line-height: 38px;
-  letter-spacing: -0.04em;
+  letter-spacing: -4%;
   text-align: left;
 }
 .category-title-color {
@@ -115,7 +115,7 @@
   font-size: 29px;
   font-weight: 700;
   line-height: 38px;
-  letter-spacing: -0.04em;
+  letter-spacing: -4%;
   text-align: left;
 }
 .book-cover {
@@ -131,7 +131,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
-  letter-spacing: -0.04em;
+  letter-spacing: -4%;
   text-align: left;
   text-transform: uppercase;
 }
@@ -143,7 +143,7 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
-  letter-spacing: -0.04em;
+  letter-spacing: -4%;
   text-align: left;
 }
 .gallery-list-item {
@@ -157,7 +157,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: 0.03em;
+  letter-spacing: 3%;
   text-align: left;
   text-transform: uppercase;
   padding-bottom: 18px;
@@ -170,7 +170,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
-  letter-spacing: -0.01em;
+  letter-spacing: -1%;
   padding: 14px 28px;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 40px;
@@ -184,7 +184,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
-  letter-spacing: -0.01em;
+  letter-spacing: -1%;
   text-align: left;
   text-transform: uppercase;
   transition: 250ms all ease;
@@ -233,7 +233,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
     text-align: left;
   }
   .gallery {
@@ -310,7 +310,7 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
-    letter-spacing: -0.04em;
+    letter-spacing: -4%;
     text-align: left;
     text-transform: uppercase;
   }

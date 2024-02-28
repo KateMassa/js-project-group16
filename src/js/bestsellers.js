@@ -1,16 +1,11 @@
-import { BooksAPI } from './fetchAPI';
+import { BooksApi } from './fetchAPI';
 import { createBookCard } from './bookCardTemplate';
 import { elements } from './renderCategory';
-import {
-  isBookAlreadyExist,
-  deleteFromLS,
-  saveToLS,
-  loadFromLS,
-} from './localStorage';
+import { isBookAlreadyExist, deleteFromLS, saveToLS, loadFromLS } from './localStorage';
 import { BookAPI } from './fetchAPI';
 // import sprite from './img/icons.svg'; // Assuming you still need this SVG sprite
 
-const booksAPI = new BooksAPI();
+const booksAPI = new BookAPI();
 const topBooksList = document.querySelector('.top-books-list');
 const booksTitleContainer = document.querySelector('.books-title-container');
 
@@ -105,7 +100,7 @@ async function onFiltred(event) {
   selectedCategoryBtn.style.display = 'none';
 
   if (categoryName !== 'Best Sellers Books') {
-    const booksByCategory = await booksAPI.getBooksByCategory(categoryName);
+    const booksByCategory = await booksApi.getBooksByCategory(categoryName);
     renderMoreBooks(booksByCategory, categoryName);
   }
 }
