@@ -9,7 +9,7 @@
     <script type="module" crossorigin src="/js-project-group16/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/js-project-group16/assets/vendor-27708577.js">
     <link rel="stylesheet" href="/js-project-group16/assets/vendor-b3ce9496.css">
-    <link rel="stylesheet" href="/js-project-group16/assets/index-8a1626f4.css">
+    <link rel="stylesheet" href="/js-project-group16/assets/index-b469ae67.css">
   </head>
   <body class="light-theme">
     <header class="page-header">
@@ -96,49 +96,33 @@
 </section>
 
     <main>
-      <section class="homepage" id="homepage">
-  <div class="container navigation-category">
-    <aside class="aside-menu">
-      <ul class="category-list">
-        <li class="category-list-item" id="all-categories">
-          <h4 class="category-name">All categories</h4>
-        </li>
-      </ul>
-      <aside class="support-box">
-        <h3 class="support-title">
-          Support Ukraine
-          <svg class="support-svg" width="20" height="32">
-            <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-trident"></use>
-          </svg>
-        </h3>
-        <div class="slider-container">
-          <ul class="support-list js-support"></ul>
-        </div>
-
-        <div class="button-support slider-button">
-          <button class="support-button">
-            <svg class="support-button-svg" width="20" height="20">
-              <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-arrow-down"></use>
-            </svg>
-          </button>
-        </div>
-      </aside>
-    </aside>
-
-    <div class="gallery">
-      <div class="title-wrapper">
-        <h2 class="category-title"></h2>
-        <h2 class="category-title-color"></h2>
+      <div class="home-container">
+  <div class="categories-support-container">
+    <section class="categories-section">
+      <div class="categories-container">
+        <ul class="category-list" id="category-list"></ul>
       </div>
-      <ul class="gallery-list"></ul>
-    </div>
+
+      
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js" type="module"></script>
+      <!-- <script src="../support.js" type="module"></script> -->
+    </section>
+
+    <!-- SUPPORT UKRAINE МАЄ БУТИ ТУТ () -->
+    <section class="support-section"></section>
   </div>
 
-  
-  
-  
-</section>
+  <section class="books-section">
+    <div class="caterories-content">
+      <div class="books-title-container"></div>
+      <ul class="top-books-list"></ul>
+      <ul class="books-list"></ul>
+      <ul class="book-list"></ul>
+    </div>
 
+    
+  </section>
+</div>
       <template id="modal-template">
   <div id="modal" class="modal-wrapper">
     <button class="modal-close">
