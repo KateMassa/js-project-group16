@@ -7,9 +7,9 @@
     <title>Digital Dream Team</title>
     
     <script type="module" crossorigin src="/js-project-group16/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/main-13ba4975.js">
+    <link rel="modulepreload" crossorigin href="/js-project-group16/assets/main-62766113.js">
     <link rel="modulepreload" crossorigin href="/js-project-group16/assets/vendor-4563c95f.js">
-    <link rel="stylesheet" href="/js-project-group16/assets/main-a8646884.css">
+    <link rel="stylesheet" href="/js-project-group16/assets/main-b574d04b.css">
     <link rel="stylesheet" href="/js-project-group16/assets/vendor-1fe10c8c.css">
   </head>
   <body class="light-theme">
@@ -18,7 +18,7 @@
     <div class="header-container">
       <a class="logo-header" href="./index.html">
         <svg class="logo-icon light-theme" height="28" width="109">
-          <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-logo-light"></use>
+          <use href="/js-project-group16/assets/icons-cf854039.svg#icon-logo-light"></use>
         </svg>
       </a>
 
@@ -28,7 +28,7 @@
           <a href="./shopping-list.html" class="nav-shopping"
             >Shopping list
             <svg class="cart-icon" height="20" width="20">
-              <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-cart-white"></use>
+              <use href="/js-project-group16/assets/icons-cf854039.svg#icon-cart-white"></use>
             </svg>
           </a>
         </div>
@@ -39,7 +39,7 @@
         <a href="#shopping-list" class="nav-shopping"
           >Shopping list
           <svg class="cart-icon" height="20" width="20">
-            <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-cart-white"></use>
+            <use href="/js-project-group16/assets/icons-cf854039.svg#icon-cart-white"></use>
           </svg>
         </a>
       </nav>
@@ -52,12 +52,12 @@
 
         <button type="button" class="burger-menu">
           <svg class="open-burger" height="28" width="28">
-            <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-menu"></use>
+            <use href="/js-project-group16/assets/icons-cf854039.svg#icon-menu"></use>
           </svg>
         </button>
         <button class="btn-close hidden" type="button">
           <svg class="icon-close" width="28" height="28">
-            <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-close"></use>
+            <use href="/js-project-group16/assets/icons-cf854039.svg#icon-close"></use>
           </svg>
         </button>
       </div>
@@ -69,11 +69,11 @@
   <nav class="nav-menu-mob">
     <div class="nav-link-wrapper">
       <div class="nav-link-inner">
-        <a href="./index.html" class="nav-link-home">Home</a>
+        <a href="./index.html" class="nav-link-home active-link">Home</a>
         <a href="./shopping-list.html" class="nav-shopping"
           >Shopping list
           <svg class="cart-icon" height="20" width="20">
-            <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-cart-white"></use>
+            <use href="/js-project-group16/assets/icons-cf854039.svg#icon-cart-white"></use>
           </svg>
         </a>
       </div>
@@ -89,7 +89,7 @@
     <a href="./shopping-list.html" class="shopping-list-page"
       >Shopping list
       <svg class="shop-icon" width="20" height="20">
-        <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-cart-white"></use>
+        <use href="/js-project-group16/assets/icons-cf854039.svg#icon-cart-white"></use>
       </svg>
     </a>
     <!-- </ul> -->
@@ -98,31 +98,35 @@
 
     <main>
       <section class="homepage">
-        <div class="container navigation-category">
-          <aside class="aside-menu">
-            <aside class="support-box">
-              <h3 class="support-title">
-                Support Ukraine
-                <svg class="support-svg" width="20" height="32">
-                  <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-trident"></use>
-                </svg>
-              </h3>
-              <div class="slider-container">
-                <ul class="support-list js-support"></ul>
-              </div>
-
-              <div class="button-support slider-button">
-                <button class="support-button">
-                  <svg class="support-button-svg" width="20" height="20">
-                    <use href="/js-project-group16/assets/icons-44d1a35d.svg#icon-arrow-down"></use>
+        <div class="container">
+          <div class="navigation-category navigation-category-shopping-list">
+            <aside class="aside-menu support-box-wrapper">
+              <aside class="support-box">
+                <h3 class="support-title">
+                  Support Ukraine
+                  <svg class="support-svg" width="20" height="32">
+                    <use href="/js-project-group16/assets/icons-cf854039.svg#icon-trident"></use>
                   </svg>
-                </button>
-              </div>
+                </h3>
+                <div class="slider-container">
+                  <ul class="support-list js-support"></ul>
+                </div>
+
+                <div class="button-support slider-button">
+                  <button class="support-button">
+                    <svg class="support-button-svg" width="20" height="20">
+                      <use href="/js-project-group16/assets/icons-cf854039.svg#icon-arrow-scroll-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </aside>
             </aside>
-          </aside>
-          <div class="gallery">
-            <div class="shopping-list"></div>
-            <div id="tui-pagination-container" class="tui-pagination"></div>
+
+            <div class="gallery gallery-shopping-list">
+              <h1 class="shopping-list-title">Shopping <span>List</span></h1>
+              <div class="shopping-list"></div>
+              <div id="tui-pagination-container" class="tui-pagination"></div>
+            </div>
           </div>
         </div>
       </section>
