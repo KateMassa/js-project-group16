@@ -90,10 +90,7 @@ function renderListByCategory(data) {
 }
 
 async function renderPageByCategory(e) {
-  const categoryNameElement = e.target.closest('li');
-  const categoryName = categoryNameElement
-    ? categoryNameElement.children[0].textContent
-    : '';
+  const categoryName = e.target.closest('li').children[0].textContent;
 
   try {
     const response = await bookAPI.fetchBooksByCategory(categoryName);
