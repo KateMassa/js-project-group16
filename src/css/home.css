@@ -88,6 +88,7 @@
 }
 .gallery-list-item {
   margin-bottom: 8px;
+  cursor: pointer;
 }
 .gallery-list-group:not(:first-child) {
   margin-top: 40px;

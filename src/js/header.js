@@ -24,9 +24,13 @@ window.addEventListener('DOMContentLoaded', function () {
   if (location.href.indexOf('shopping-list') > -1) {
     document.querySelector('.nav-link-home').classList.remove('active-link');
     document.querySelector('.nav-shopping').classList.add('active-link');
+    document.querySelector('.home-page').classList.remove('active-link');
+    document.querySelector('.shopping-list-page').classList.add('active-link');
   } else {
     document.querySelector('.nav-link-home').classList.add('active-link');
     document.querySelector('.nav-shopping').classList.remove('active-link');
+    document.querySelector('.home-page').classList.add('active-link');
+    document.querySelector('.shopping-list-page').classList.remove('active-link');
   }
 });
 

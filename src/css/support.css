@@ -1,7 +1,7 @@
 .support-box {
   display: grid;
   padding-top: 24px;
-  width: 335px;
+  max-width: 335px;
   height: 446px;
   background: radial-gradient(
     183.6% 183.01% at 59.76% -23.42%,
@@ -10,6 +10,10 @@
   );
   box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
   border-radius: 16px;
+}
+
+.aside-menu.support-box-wrapper {
+  display: none;
 }
 
 .support-svg {
@@ -34,27 +38,32 @@
   .support-box {
     max-width: 356px;
     height: 474px;
+    box-sizing: border-box;
+  }
+
+  .aside-menu.support-box-wrapper {
+    display: flex;
+  }
+
+  .aside-menu .support-title {
+    font-size: 24px;
   }
 }
 
 .support-title {
   display: flex;
-  padding-left: 40px;
+  align-items: center;
   color: white;
   font-weight: 700;
-  margin-top: 16px;
-  font-size: 28px;
+  margin-left: 40px;
+  font-size: 22px;
   line-height: 1.2;
   letter-spacing: -0.04em;
-  padding-bottom: 40px;
-  /* text-shadow: -1px -1px 0 black,
-        1px -1px 0 black,
-        -1px 1px 0 black,
-        1px 1px 0 black; */
+  margin-bottom: 40px;
 }
 
 .support-list {
-  padding-left: 40px;
+  margin-left: 40px;
   color: white;
 }
 
@@ -105,6 +114,7 @@
 
 .support-button-svg {
   fill: var(--accent-color);
+  fill: #4f2ee8;
   display: flex;
   margin: 0;
   width: 20px;
@@ -146,6 +156,11 @@
   display: flex;
   align-items: center;
   height: 32px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.04em;
+  color: #fff;
 }
 
 .support-link {

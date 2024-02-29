@@ -95,6 +95,11 @@
   background-size: contain;
 }
 
+.nav-menu-mob .shopping-list-page.active-link > .shop-icon {
+  fill: #111;
+  stroke: #111;
+}
+
 .nav-link-wrapper {
   display: flex;
   justify-content: center;
