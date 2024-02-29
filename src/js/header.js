@@ -1,13 +1,17 @@
 //Theme switcher in header
 
+
+import logoDark from '../img/icons.svg#icon-logo-dark';
+import logoLight from '../img/icons.svg#icon-logo-light';
+
 const themeSwitch = document.getElementById('themeSwitch');
+const logoIcon = document.querySelector('.logo-icon');
 
 themeSwitch.addEventListener('change', function () {
-  const logoIcon = document.querySelector('.logo-icon use');
   if (this.checked) {
-    logoIcon.setAttribute('href', '../img/icons.svg#icon-logo-dark');
+    document.querySelector('.logo-icon').classList.add('active-logo');
   } else {
-    logoIcon.setAttribute('href', '../img/icons.svg#icon-logo-light');
+    document.querySelector('.logo-icon').classList.remove('active-logo');
   }
 });
 
@@ -26,6 +30,7 @@ window.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.nav-shopping').classList.add('active-link');
     document.querySelector('.home-page').classList.remove('active-link');
     document.querySelector('.shopping-list-page').classList.add('active-link');
+    document.querySelector('.logo-icon').classList.add('active-logo');
   } else {
     document.querySelector('.nav-link-home').classList.add('active-link');
     document.querySelector('.nav-shopping').classList.remove('active-link');

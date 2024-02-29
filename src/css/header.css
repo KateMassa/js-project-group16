@@ -7,6 +7,9 @@
   border-radius: 0 0 8px 8px;
 }
 
+.logo-light {
+}
+
 .light-theme .page-header {
   background-color: #fff;
   border: 1.5px solid #111111;
@@ -127,6 +130,20 @@
 .logo-header {
   margin-right: auto;
   align-self: center;
+}
+
+.light-theme .logo-header svg.dark-logo {
+  display: none;
+}
+.dark-theme .logo-header svg.light-logo {
+  display: block;
+}
+
+.dark-theme .logo-header svg.light-logo {
+  display: none;
+}
+.dark-theme .logo-header svg.dark-logo {
+  display: block;
 }
 
 .theme-switch {

@@ -1,7 +1,8 @@
 import Pagination from 'tui-pagination';
 import { deleteFromLS, loadFromLS } from './localStorage';
 
-import 'tui-pagination/dist/tui-pagination.css'
+import 'tui-pagination/dist/tui-pagination.css';
+import basketIcon from '../img/icons.svg#icon-trash';
 
 import amazonIcon from '../img/amazon-default.png';
 import appleIcon from '../img/book-default.png';
