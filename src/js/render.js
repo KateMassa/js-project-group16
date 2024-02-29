@@ -131,6 +131,12 @@ function renderCategoryTitleByColors(categoryTitle) {
   categoryName.nextElementSibling.textContent = `${blueWord}`;
 }
 
-//додаємо обробники подій
-categoryList.addEventListener('click', renderPageByCategory);
 allCategories.addEventListener('click', showAllCategories);
+
+categoryList.addEventListener('click', function (event) {
+  if (!event.target.classList.contains('category-list-item')) {
+    return;
+  }
+
+  renderPageByCategory(event);
+});
