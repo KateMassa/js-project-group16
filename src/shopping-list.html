@@ -12,31 +12,35 @@
     <load src="partials/mobile-menu.html" />
     <main>
       <section class="homepage">
-        <div class="container navigation-category">
-          <aside class="aside-menu">
-            <aside class="support-box">
-              <h3 class="support-title">
-                Support Ukraine
-                <svg class="support-svg" width="20" height="32">
-                  <use href="./img/icons.svg#icon-trident"></use>
-                </svg>
-              </h3>
-              <div class="slider-container">
-                <ul class="support-list js-support"></ul>
-              </div>
-
-              <div class="button-support slider-button">
-                <button class="support-button">
-                  <svg class="support-button-svg" width="20" height="20">
-                    <use href="./img/icons.svg#icon-arrow-down"></use>
+        <div class="container">
+          <div class="navigation-category navigation-category-shopping-list">
+            <aside class="aside-menu support-box-wrapper">
+              <aside class="support-box">
+                <h3 class="support-title">
+                  Support Ukraine
+                  <svg class="support-svg" width="20" height="32">
+                    <use href="./img/icons.svg#icon-trident"></use>
                   </svg>
-                </button>
-              </div>
+                </h3>
+                <div class="slider-container">
+                  <ul class="support-list js-support"></ul>
+                </div>
+
+                <div class="button-support slider-button">
+                  <button class="support-button">
+                    <svg class="support-button-svg" width="20" height="20">
+                      <use href="./img/icons.svg#icon-arrow-scroll-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </aside>
             </aside>
-          </aside>
-          <div class="gallery">
-            <div class="shopping-list"></div>
-            <div id="tui-pagination-container" class="tui-pagination"></div>
+
+            <div class="gallery gallery-shopping-list">
+              <h1 class="shopping-list-title">Shopping <span>List</span></h1>
+              <div class="shopping-list"></div>
+              <div id="tui-pagination-container" class="tui-pagination"></div>
+            </div>
           </div>
         </div>
       </section>

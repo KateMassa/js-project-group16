@@ -24,8 +24,15 @@ function renderShopList(data) {
     return;
   }
 
+  if (data.length === 0) {
+    shoppingList.classList.add('empty-page-content');
+  } else {
+    shoppingList.classList.remove('empty-page-content');
+    // Render shopping list data here
+  }
+
   shoppingList.innerHTML = '';
-  const defaultMarkup = `<p>This page is empty, add some books and proceed to order.</p>
+  const defaultMarkup = `<p class="shopping-list-empty-text">This page is empty, add some books and proceed to order.</p>
           <img
           class="no-book"
           src="${booksIcon}"
@@ -60,23 +67,25 @@ function renderShopList(data) {
                   />
                   <div class="description">
                       <div class="up-part">
-                      <h2 class="book-name">${title}</h2>
+                        <h2 class="book-name">${title}</h2>
+                        <h3 class="type-name">${list_name}</h3>
 
-                      <button data-id="${_id}" class="basket" type="button">
-                          <svg class="trash" width="16" height="16">
-                          <use href="#icon-trash"></use>
-                          </svg>
-                      </button>
+                        <button data-id="${_id}" class="basket" type="button">
+                            <svg class="trash" width="16" height="16">
+                            <use href="./img/icons.svg#icon-trash"></use>
+                            </svg>
+                        </button>
                       </div>
-                      <h3 class="type-name">${list_name}</h3>
                       <p class="text-description">
                       ${description}
                       </p>
 
                       <div class="book-app">
-                      <h3 class="name-author">${author}</h3>
-                      <a href="${amazonLink}" target="_blank"><img class="amazon" src="${amazonIcon}" alt="amazon" /></a>
-                      <a href="${appleBookLink}" target="_blank"><img class="apple" src="${appleIcon}" alt="apple" /></a>
+                        <h3 class="name-author">${author}</h3>
+                        <div class="book-links">
+                          <a href="${amazonLink}" class="book-links-amazon" target="_blank"></a>
+                          <a href="${appleBookLink}" class="book-links-applebook" target="_blank"></a>
+                        </div>
                       </div>
                   </div>
                   </li>`;
