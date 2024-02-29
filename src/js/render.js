@@ -131,7 +131,7 @@ function renderCategoryTitleByColors(categoryTitle) {
   categoryName.nextElementSibling.textContent = `${blueWord}`;
 }
 
-// allCategories.addEventListener('click', showAllCategories);
+allCategories.addEventListener('click', showAllCategories);
 
 categoryList.addEventListener('click', function (event) {
   if (!event.target.classList.contains('category-list-item')) {
