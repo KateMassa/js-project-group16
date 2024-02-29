@@ -227,7 +227,7 @@ body {
   justify-content: center;
   border: none;
 }
-
+/* 
 .basket {
   background-color: #4f2ee8;
   width: 28px;
@@ -237,7 +237,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .trash {
   fill: #ffffff;
